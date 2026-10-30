@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Transport Office &amp; Emergency Card — AIUB BMS Parent Portal</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500;600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="transport-office.css" />
+  </head>
+  <body>
+    <div class="card-preview-wrapper">
+      <section class="transport-office-card" id="transport-office" aria-labelledby="transport-office-heading">
+        <div class="transport-card-header">
+          <div class="transport-title-group">
+            <h2 id="transport-office-heading" class="feature-card-title">Call Transport Office &amp; Emergency Support</h2>
+            <p class="transport-subtitle">AIUB Permanent Campus Transport Control Room (Gate-B, Kuratoli, Dhaka)</p>
+          </div>
+          <span class="transport-status-text text-green">Control Room Open &middot; 07:00 AM – 09:00 PM</span>
+        </div>
+
+        <div class="transport-grid">
+          <div class="transport-item">
+            <span class="transport-label">Transport Helpline Desk</span>
+            <strong class="transport-phone mono">+880 2-8414046</strong>
+            <span class="transport-note">PABX Ext: <span class="mono">310, 312</span> &middot; Route &amp; Pass Desk</span>
+          </div>
+
+          <div class="transport-item">
+            <span class="transport-label">24/7 Emergency Dispatch</span>
+            <strong class="transport-phone text-red mono">+880 1711-482910</strong>
+            <span class="transport-note">Duty Officer: Engr. Kamrul Hasan</span>
+          </div>
+
+          <div class="transport-item">
+            <span class="transport-label">Assigned Bus Driver (Gazipur-01)</span>
+            <strong class="transport-phone text-blue mono">+880 1712-903411</strong>
+            <span class="transport-note">Md. Rafiqul Islam &middot; Helper: <span class="mono">01819-554210</span></span>
+          </div>
+
+          <div class="transport-item transport-actions">
+            <a href="#call-transport-office" class="btn-office-call">
+              <span>&#9742;</span>
+              <span>Connect Transport Office</span>
+            </a>
+            <a href="#call-driver" class="btn-driver-outline">
+              <span>&#9742;</span>
+              <span>Contact Bus Driver</span>
+            </a>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <div id="call-transport-office" class="contact-modal-overlay" role="dialog" aria-labelledby="modal-office-title">
+      <div class="contact-modal-card">
+        <div class="contact-modal-header">
+          <div>
+            <span class="modal-kicker">AIUB Transport Division</span>
+            <h3 id="modal-office-title" class="modal-title">Call Transport Office</h3>
+          </div>
+          <a href="#transport-office" class="modal-close-btn" aria-label="Close">&times;</a>
+        </div>
+
+        <div class="contact-modal-body">
+          <div class="call-status-banner">
+            <span class="call-pulse-dot"></span>
+            <div>
+              <strong class="call-status-title">Control Room Line Active</strong>
+              <p class="call-status-sub">Kuratoli Permanent Campus &middot; Gate-B Dispatch</p>
+            </div>
+          </div>
+
+          <dl class="modal-contact-list">
+            <div class="modal-contact-row">
+              <dt>Primary Hotline</dt>
+              <dd class="mono">+880 2-8414046 (Ext. 310)</dd>
+            </div>
+            <div class="modal-contact-row">
+              <dt>Emergency Hotline</dt>
+              <dd class="mono text-red">+880 1711-482910</dd>
+            </div>
+            <div class="modal-contact-row">
+              <dt>Transport Coordinator</dt>
+              <dd>Engr. Kamrul Hasan</dd>
+            </div>
+            <div class="modal-contact-row">
+              <dt>Official Email</dt>
+              <dd class="mono">transport@aiub.edu</dd>
+            </div>
+          </dl>
+
+          <div class="modal-footer-actions">
+            <a href="#transport-office" class="btn-modal-primary">Done</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="call-driver" class="contact-modal-overlay" role="dialog" aria-labelledby="modal-driver-title">
+      <div class="contact-modal-card">
+        <div class="contact-modal-header">
+          <div>
+            <span class="modal-kicker">Assigned Bus Gazipur-01 &middot; Route RT-04</span>
+            <h3 id="modal-driver-title" class="modal-title">Driver &amp; Helper Contact</h3>
+          </div>
+          <a href="#transport-office" class="modal-close-btn" aria-label="Close">&times;</a>
+        </div>
+
+        <div class="contact-modal-body">
+          <div class="call-status-banner">
+            <span class="call-pulse-dot"></span>
+            <div>
+              <strong class="call-status-title">Md. Rafiqul Islam (Senior Driver)</strong>
+              <p class="call-status-sub">Currently in transit (Mohakhali &rarr; Banani)</p>
+            </div>
+          </div>
+
+          <dl class="modal-contact-list">
+            <div class="modal-contact-row">
+              <dt>Driver Mobile</dt>
+              <dd class="mono">+880 1712-903411</dd>
+            </div>
+            <div class="modal-contact-row">
+              <dt>Bus Helper (Onboard)</dt>
+              <dd class="mono">+880 1819-554210</dd>
+            </div>
+            <div class="modal-contact-row">
+              <dt>Bus Registration</dt>
+              <dd class="mono">DHAKA METRO-BA 14-8921</dd>
+            </div>
+          </dl>
+
+          <div class="modal-footer-actions">
+            <a href="#transport-office" class="btn-modal-primary">Done</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Student Profile Card — AIUB BMS Parent Portal</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500;600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="student-profile.css" />
+  </head>
+  <body>
+    <div class="card-preview-wrapper">
+      <section class="student-profile-card" aria-labelledby="student-profile-heading">
+        <div class="card-top-bar"></div>
+
+        <div class="student-card-body">
+          <div class="cap-icon-box" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="42" height="42" fill="none" stroke="currentColor" stroke-width="1.8">
+              <path d="M22 10L12 5 2 10l10 5 10-5z" />
+              <path d="M6 12v5c0 1.7 2.7 3 6 3s6-1.3 6-3v-5" />
+              <path d="M22 10v6" />
+            </svg>
+          </div>
+
+          <h2 id="student-profile-heading" class="student-heading">Student Profile</h2>
+          <p class="student-name">Md. Tahmidur Rahman Khan</p>
+          <p class="student-id-text">
+            ID: <span class="mono">23-54334-3</span> &middot; CSE (FST)
+          </p>
+
+          <div class="pass-status-line">
+            <span class="pass-label">Bus Pass Status:</span>
+            <span class="pass-status-active">Active &#10003;</span>
+          </div>
+
+          <hr class="card-divider" />
+
+          <dl class="student-meta-list">
+            <div class="meta-row">
+              <dt>Travel Status:</dt>
+              <dd class="text-amber">Onboard &middot; In Transit</dd>
+            </div>
+            <div class="meta-row">
+              <dt>Reserved Seat:</dt>
+              <dd class="mono">B-04 (Window)</dd>
+            </div>
+            <div class="meta-row">
+              <dt>Pickup Point:</dt>
+              <dd>Dhanmondi 27 Gate</dd>
+            </div>
+            <div class="meta-row">
+              <dt>Emergency Contact:</dt>
+              <dd><strong>Registered</strong></dd>
+            </div>
+          </dl>
+
+          <div class="student-card-footer">
+            <span>Pass Valid Until: <strong class="mono">30 Nov 2026</strong></span>
+            <span class="mono">+880 1711-482910</span>
+          </div>
+        </div>
+      </section>
+    </div>
+  </body>
+</html>

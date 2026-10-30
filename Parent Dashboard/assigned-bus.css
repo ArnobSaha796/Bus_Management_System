@@ -1,0 +1,243 @@
+:root {
+  --gold-accent: #fbbf24;
+  --blue-accent: #0d6efd;
+  --green-success: #198754;
+  --danger-red: #dc3545;
+  --bg-page: #f4f6f9;
+  --bg-card: #ffffff;
+  --bg-subtle: #f8fafc;
+  --border-color: #e2e8f0;
+  --border-light: #f1f5f9;
+  --text-main: #0f172a;
+  --text-body: #475569;
+  --text-muted: #64748b;
+  --card-radius: 12px;
+  --card-shadow: 0 4px 14px rgba(15, 23, 42, 0.05);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  background-color: var(--bg-page);
+  color: var(--text-main);
+  line-height: 1.5;
+  padding: 32px;
+}
+
+.card-preview-wrapper {
+  max-width: 780px;
+  margin: 0 auto;
+}
+
+.mono {
+  font-family: 'JetBrains Mono', monospace;
+  font-variant-numeric: tabular-nums;
+}
+
+.text-blue {
+  color: var(--blue-accent);
+}
+
+.text-red {
+  color: var(--danger-red);
+}
+
+.assigned-bus-card {
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--card-radius);
+  box-shadow: var(--card-shadow);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.card-banner-header {
+  background-color: var(--gold-accent);
+  padding: 15px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.banner-heading {
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: #0f172a;
+}
+
+.bus-plate {
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: #1e293b;
+}
+
+.assigned-bus-body {
+  padding: 26px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.bus-telemetry-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.telemetry-col {
+  padding: 4px 16px;
+  border-right: 1px solid var(--border-color);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 4px;
+}
+
+.telemetry-col:last-child {
+  border-right: none;
+}
+
+.telemetry-label {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--text-body);
+}
+
+.telemetry-value {
+  font-size: 1.55rem;
+  font-weight: 800;
+  line-height: 1.2;
+}
+
+.telemetry-sub,
+.driver-name {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+}
+
+.btn-call-driver {
+  margin-top: 4px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 14px;
+  border: 1.5px solid var(--green-success);
+  border-radius: 6px;
+  color: var(--green-success);
+  text-decoration: none;
+  font-size: 0.8rem;
+  font-weight: 700;
+  white-space: nowrap;
+  transition: background-color 0.15s ease, color 0.15s ease;
+}
+
+.btn-call-driver:hover {
+  background-color: var(--green-success);
+  color: #ffffff;
+}
+
+.route-tracking-box {
+  background-color: var(--bg-subtle);
+  border: 1px solid var(--border-color);
+  border-radius: 10px;
+  padding: 20px 24px;
+}
+
+.route-box-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 18px;
+}
+
+.route-box-title {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: #334155;
+}
+
+.route-box-meta {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+}
+
+.route-progress-track {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.route-stop {
+  padding: 8px 18px;
+  border-radius: 999px;
+  font-size: 0.86rem;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.stop-start {
+  background-color: var(--blue-accent);
+  color: #ffffff;
+}
+
+.stop-current {
+  background-color: var(--gold-accent);
+  color: #0f172a;
+  font-weight: 800;
+}
+
+.stop-end {
+  background-color: var(--green-success);
+  color: #ffffff;
+}
+
+.route-line {
+  flex: 1;
+  height: 4px;
+}
+
+.line-completed {
+  background-color: var(--gold-accent);
+}
+
+.line-upcoming {
+  background-color: var(--border-color);
+}
+
+.route-note {
+  margin-top: 16px;
+  text-align: center;
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+@media (max-width: 640px) {
+  .bus-telemetry-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .telemetry-col {
+    border-right: none;
+    border-bottom: 1px solid var(--border-light);
+    padding-bottom: 12px;
+  }
+
+  .route-progress-track {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .route-line {
+    display: none;
+  }
+}

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Today's Assigned Bus Card — AIUB BMS Parent Portal</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500;600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="assigned-bus.css" />
+  </head>
+  <body>
+    <div class="card-preview-wrapper">
+      <section class="assigned-bus-card" aria-labelledby="assigned-bus-heading">
+        <div class="card-banner-header">
+          <h2 id="assigned-bus-heading" class="banner-heading">Today's Assigned Bus</h2>
+          <span class="bus-plate mono">DHAKA METRO-BA 14-8921 &middot; Route RT-04</span>
+        </div>
+
+        <div class="assigned-bus-body">
+          <div class="bus-telemetry-grid">
+            <div class="telemetry-col">
+              <span class="telemetry-label">Bus Name</span>
+              <strong class="telemetry-value text-blue">Gazipur-01</strong>
+              <span class="telemetry-sub mono">38/44 Seats Occupied</span>
+            </div>
+
+            <div class="telemetry-col">
+              <span class="telemetry-label">Departure Time</span>
+              <strong class="telemetry-value text-red mono">08:00 AM</strong>
+              <span class="telemetry-sub">Campus ETA: <span class="mono">08:50 AM</span></span>
+            </div>
+
+            <div class="telemetry-col">
+              <span class="telemetry-label">Driver Contact</span>
+              <span class="driver-name">Md. Rafiqul Islam</span>
+              <a href="tel:+8801712903411" class="btn-call-driver">
+                <span>&#9742;</span>
+                <span>Call Driver</span>
+              </a>
+            </div>
+          </div>
+
+          <div class="route-tracking-box">
+            <div class="route-box-header">
+              <span class="route-box-title">Route Tracking:</span>
+              <span class="route-box-meta mono">Speed: 34 km/h &middot; Progress: 50%</span>
+            </div>
+
+            <div class="route-progress-track">
+              <div class="route-stop stop-start">Start: Dhanmondi</div>
+              <div class="route-line line-completed"></div>
+              <div class="route-stop stop-current">Current: Mohakhali</div>
+              <div class="route-line line-upcoming"></div>
+              <div class="route-stop stop-end">End: Banani</div>
+            </div>
+
+            <p class="route-note">
+              * The bus is currently midway to the destination (Next stop: Banani &rarr; AIUB Campus).
+            </p>
+          </div>
+        </div>
+      </section>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard Layout Structure — AIUB BMS Parent Portal</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500;600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="layout.css" />
+  </head>
+  <body>
+    <div class="dashboard-layout">
+      <aside class="sidebar" aria-label="Parent Portal Sidebar">
+        <div class="sidebar-brand">
+          <div class="brand-logo" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M8 6v6" />
+              <path d="M15 6v6" />
+              <path d="M2 12h19.6" />
+              <path d="M18 18h3s.5-1.7.8-2.8c.1-.4.2-.8.2-1.2 0-.4-.1-.8-.2-1.2l-1.4-5C20.1 6.8 19.1 6 18 6H4a2 2 0 0 0-2 2v10h3" />
+              <circle cx="7" cy="18" r="2" />
+              <path d="M9 18h5" />
+              <circle cx="16" cy="18" r="2" />
+            </svg>
+          </div>
+          <div class="brand-info">
+            <span class="brand-title">AIUB BMS</span>
+            <span class="brand-subtitle">PARENT PANEL</span>
+          </div>
+        </div>
+
+        <nav class="sidebar-nav" aria-label="Parent Dashboard Navigation">
+          <a href="index.html" class="nav-item active">Home</a>
+          <a href="student-profile.html" class="nav-item">Student Profile Card</a>
+          <a href="assigned-bus.html" class="nav-item">Assigned Bus Card</a>
+          <a href="pickup-schedule.html" class="nav-item">Pickup &amp; Schedule Card</a>
+          <a href="travel-status.html" class="nav-item">Travel Status Card</a>
+          <a href="notifications.html" class="nav-item">Notifications Card</a>
+        </nav>
+
+        <div class="sidebar-footer">
+          <div class="user-account">
+            <div class="user-avatar" aria-hidden="true">P</div>
+            <div class="user-details">
+              <p class="user-email">parent@gmail.com</p>
+              <p class="user-role">Parent</p>
+            </div>
+          </div>
+
+          <button type="button" class="btn-logout">Log Out</button>
+        </div>
+      </aside>
+
+      <div class="main-area">
+        <header class="dashboard-header">
+          <div class="header-left">
+            <h1 class="dashboard-title">Parent Dashboard</h1>
+            <p class="dashboard-subtitle">
+              AIUB Campus Transport Monitoring &middot; Linked Student ID:
+              <span class="mono">23-54334-3</span>
+            </p>
+          </div>
+
+          <div class="header-right">
+            <a href="tel:+88028414046" class="btn-helpline">Call Transport Office</a>
+          </div>
+        </header>
+
+        <main class="dashboard-grid-container">
+          <div class="grid-row-top">
+            <div class="layout-placeholder">Card 01 Slot: Student Profile (student-profile.html)</div>
+            <div class="layout-placeholder">Card 02 Slot: Today's Assigned Bus (assigned-bus.html)</div>
+          </div>
+
+          <div class="grid-row-bottom">
+            <div class="layout-placeholder">Card 03 Slot: Pickup &amp; Schedule (pickup-schedule.html)</div>
+            <div class="layout-placeholder">Card 04 Slot: Travel Status (travel-status.html)</div>
+            <div class="layout-placeholder">Card 05 Slot: Notifications (notifications.html)</div>
+          </div>
+        </main>
+      </div>
+    </div>
+  </body>
+</html>
