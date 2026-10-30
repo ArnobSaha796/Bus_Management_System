@@ -1,0 +1,341 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Manage Schedules - AIUB BMS Admin Panel</title>
+    <!-- Font Awesome 6 for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <!-- External Section Stylesheet -->
+    <link rel="stylesheet" href="schedules.css" />
+  </head>
+  <body>
+    <div class="admin-layout">
+      <!-- ==================== LEFT SIDEBAR ==================== -->
+      <aside class="sidebar">
+        <div class="sidebar-brand">
+          <div class="brand-logo-box">
+            <i class="fa-solid fa-bus"></i>
+          </div>
+          <div class="brand-text">
+            <h1 class="brand-title">AIUB BMS</h1>
+            <span class="brand-subtitle">ADMIN PANEL</span>
+          </div>
+        </div>
+
+        <nav class="sidebar-nav" aria-label="Admin Navigation">
+          <a href="index.html" class="nav-item">
+            <i class="fa-solid fa-house"></i>
+            <span>Home</span>
+          </a>
+        </nav>
+
+        <div class="sidebar-footer">
+          <div class="admin-profile">
+            <div class="admin-avatar">
+              <i class="fa-solid fa-user"></i>
+            </div>
+            <div class="admin-info">
+              <p class="admin-email">amiadmin@gmail.com</p>
+              <span class="admin-role">Administrator</span>
+            </div>
+          </div>
+          <button type="button" class="btn-logout">
+            <i class="fa-solid fa-right-from-bracket"></i>
+            <span>Log Out</span>
+          </button>
+        </div>
+      </aside>
+
+      <!-- ==================== MAIN CONTENT AREA ==================== -->
+      <main class="main-content">
+        <header class="page-header-row">
+          <div>
+            <h2 class="page-heading">MANAGE SCHEDULES</h2>
+            <div class="heading-underline"></div>
+          </div>
+          <a href="#modal-add" class="btn-primary-add">
+            <i class="fa-solid fa-plus"></i>
+            <span>Add New Schedule</span>
+          </a>
+        </header>
+
+        <!-- Manage Schedules Table Card -->
+        <section class="table-card" aria-label="Manage Schedules Table">
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th>Days of Week</th>
+                <th>Departure Time</th>
+                <th>Bus</th>
+                <th>Route</th>
+                <th class="text-right">Actions</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="days-cell"><i class="fa-solid fa-calendar-days"></i> Sunday - Thursday</td>
+                <td class="time-cell">06:00:00</td>
+                <td><span class="bus-link">Gazipur-01</span></td>
+                <td class="route-text">Shibbari → Board Bazar → Tongi → Kuril → AIUB</td>
+                <td class="text-right">
+                  <div class="icon-actions">
+                    <a href="#modal-edit" class="btn-icon btn-icon-edit" title="Edit Schedule"><i class="fa-regular fa-pen-to-square"></i></a>
+                    <a href="#modal-view" class="btn-icon btn-icon-view" title="View Schedule"><i class="fa-regular fa-eye"></i></a>
+                    <a href="#modal-delete" class="btn-icon btn-icon-delete" title="Delete Schedule"><i class="fa-solid fa-trash"></i></a>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td class="days-cell"><i class="fa-solid fa-calendar-days"></i> Sunday - Thursday</td>
+                <td class="time-cell">09:00:00</td>
+                <td><span class="bus-link">Gazipur-02</span></td>
+                <td class="route-text">Shibbari → Bypass → Purbachal 300 Feet → AIUB</td>
+                <td class="text-right">
+                  <div class="icon-actions">
+                    <a href="#modal-edit" class="btn-icon btn-icon-edit" title="Edit Schedule"><i class="fa-regular fa-pen-to-square"></i></a>
+                    <a href="#modal-view" class="btn-icon btn-icon-view" title="View Schedule"><i class="fa-regular fa-eye"></i></a>
+                    <a href="#modal-delete" class="btn-icon btn-icon-delete" title="Delete Schedule"><i class="fa-solid fa-trash"></i></a>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td class="days-cell"><i class="fa-solid fa-calendar-days"></i> Sunday - Thursday</td>
+                <td class="time-cell">06:00:00</td>
+                <td><span class="bus-link">Jatrabari-01</span></td>
+                <td class="route-text">Jatrabari → Sayedabad → Rampura → Badda → AIUB</td>
+                <td class="text-right">
+                  <div class="icon-actions">
+                    <a href="#modal-edit" class="btn-icon btn-icon-edit" title="Edit Schedule"><i class="fa-regular fa-pen-to-square"></i></a>
+                    <a href="#modal-view" class="btn-icon btn-icon-view" title="View Schedule"><i class="fa-regular fa-eye"></i></a>
+                    <a href="#modal-delete" class="btn-icon btn-icon-delete" title="Delete Schedule"><i class="fa-solid fa-trash"></i></a>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td class="days-cell"><i class="fa-solid fa-calendar-days"></i> Sunday - Thursday</td>
+                <td class="time-cell">09:00:00</td>
+                <td><span class="bus-link">Jatrabari-02</span></td>
+                <td class="route-text">Jatrabari → Hanif Flyover → Hatirjheel → AIUB</td>
+                <td class="text-right">
+                  <div class="icon-actions">
+                    <a href="#modal-edit" class="btn-icon btn-icon-edit" title="Edit Schedule"><i class="fa-regular fa-pen-to-square"></i></a>
+                    <a href="#modal-view" class="btn-icon btn-icon-view" title="View Schedule"><i class="fa-regular fa-eye"></i></a>
+                    <a href="#modal-delete" class="btn-icon btn-icon-delete" title="Delete Schedule"><i class="fa-solid fa-trash"></i></a>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td class="days-cell"><i class="fa-solid fa-calendar-days"></i> Sunday - Thursday</td>
+                <td class="time-cell">06:00:00</td>
+                <td><span class="bus-link">Mirpur-01</span></td>
+                <td class="route-text">Mirpur 12 → Agargaon → Mohakhali → Banani → AIUB</td>
+                <td class="text-right">
+                  <div class="icon-actions">
+                    <a href="#modal-edit" class="btn-icon btn-icon-edit" title="Edit Schedule"><i class="fa-regular fa-pen-to-square"></i></a>
+                    <a href="#modal-view" class="btn-icon btn-icon-view" title="View Schedule"><i class="fa-regular fa-eye"></i></a>
+                    <a href="#modal-delete" class="btn-icon btn-icon-delete" title="Delete Schedule"><i class="fa-solid fa-trash"></i></a>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td class="days-cell"><i class="fa-solid fa-calendar-days"></i> Sunday - Thursday</td>
+                <td class="time-cell">09:00:00</td>
+                <td><span class="bus-link">Mirpur-02</span></td>
+                <td class="route-text">Mirpur 1 → Cantonment → Kalshi → Kuril → AIUB</td>
+                <td class="text-right">
+                  <div class="icon-actions">
+                    <a href="#modal-edit" class="btn-icon btn-icon-edit" title="Edit Schedule"><i class="fa-regular fa-pen-to-square"></i></a>
+                    <a href="#modal-view" class="btn-icon btn-icon-view" title="View Schedule"><i class="fa-regular fa-eye"></i></a>
+                    <a href="#modal-delete" class="btn-icon btn-icon-delete" title="Delete Schedule"><i class="fa-solid fa-trash"></i></a>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td class="days-cell"><i class="fa-solid fa-calendar-days"></i> Sunday - Thursday</td>
+                <td class="time-cell">06:00:00</td>
+                <td><span class="bus-link">Dhanmondi-01</span></td>
+                <td class="route-text">Dhanmondi 15 → Shahbag → Tejgaon → AIUB</td>
+                <td class="text-right">
+                  <div class="icon-actions">
+                    <a href="#modal-edit" class="btn-icon btn-icon-edit" title="Edit Schedule"><i class="fa-regular fa-pen-to-square"></i></a>
+                    <a href="#modal-view" class="btn-icon btn-icon-view" title="View Schedule"><i class="fa-regular fa-eye"></i></a>
+                    <a href="#modal-delete" class="btn-icon btn-icon-delete" title="Delete Schedule"><i class="fa-solid fa-trash"></i></a>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td class="days-cell"><i class="fa-solid fa-calendar-days"></i> Sunday - Thursday</td>
+                <td class="time-cell">09:00:00</td>
+                <td><span class="bus-link">Dhanmondi-02</span></td>
+                <td class="route-text">Dhanmondi 27 → Farmgate → Kakoli → AIUB</td>
+                <td class="text-right">
+                  <div class="icon-actions">
+                    <a href="#modal-edit" class="btn-icon btn-icon-edit" title="Edit Schedule"><i class="fa-regular fa-pen-to-square"></i></a>
+                    <a href="#modal-view" class="btn-icon btn-icon-view" title="View Schedule"><i class="fa-regular fa-eye"></i></a>
+                    <a href="#modal-delete" class="btn-icon btn-icon-delete" title="Delete Schedule"><i class="fa-solid fa-trash"></i></a>
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+
+        <!-- ==================== 1. ADD MODAL ==================== -->
+        <div id="modal-add" class="modal-overlay" role="dialog" aria-labelledby="modal-add-title">
+          <div class="modal-box">
+            <div class="modal-header">
+              <h3 id="modal-add-title"><i class="fa-regular fa-clock"></i> Add New Schedule</h3>
+              <a href="#" class="modal-close" aria-label="Close">&times;</a>
+            </div>
+            <form action="#" class="modal-form">
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="add-sched-days">Days of Week</label>
+                  <select id="add-sched-days">
+                    <option selected>Sunday - Thursday</option>
+                    <option>Sunday - Wednesday</option>
+                    <option>Monday - Thursday</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="add-sched-time">Departure Time</label>
+                  <input type="text" id="add-sched-time" value="06:00:00" placeholder="06:00:00" required />
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="add-sched-bus">Assign Bus</label>
+                <select id="add-sched-bus">
+                  <option>Gazipur-01</option>
+                  <option>Gazipur-02</option>
+                  <option>Jatrabari-01</option>
+                  <option>Jatrabari-02</option>
+                  <option>Mirpur-01</option>
+                  <option>Mirpur-02</option>
+                  <option>Dhanmondi-01</option>
+                  <option>Dhanmondi-02</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="add-sched-route">Assign Route</label>
+                <select id="add-sched-route">
+                  <option>Shibbari → Board Bazar → Tongi → Kuril → AIUB</option>
+                  <option>Shibbari → Bypass → Purbachal 300 Feet → AIUB</option>
+                  <option>Jatrabari → Sayedabad → Rampura → Badda → AIUB</option>
+                  <option>Mirpur 12 → Agargaon → Mohakhali → Banani → AIUB</option>
+                  <option>Dhanmondi 15 → Shahbag → Tejgaon → AIUB</option>
+                </select>
+              </div>
+              <div class="modal-footer">
+                <a href="#" class="btn-modal-cancel">Cancel</a>
+                <a href="#" class="btn-modal-submit">Save Schedule</a>
+              </div>
+            </form>
+          </div>
+        </div>
+
+        <!-- ==================== 2. EDIT MODAL ==================== -->
+        <div id="modal-edit" class="modal-overlay" role="dialog" aria-labelledby="modal-edit-title">
+          <div class="modal-box">
+            <div class="modal-header">
+              <h3 id="modal-edit-title"><i class="fa-regular fa-pen-to-square"></i> Edit Schedule</h3>
+              <a href="#" class="modal-close" aria-label="Close">&times;</a>
+            </div>
+            <form action="#" class="modal-form">
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="edit-sched-days">Days of Week</label>
+                  <select id="edit-sched-days">
+                    <option selected>Sunday - Thursday</option>
+                    <option>Sunday - Wednesday</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="edit-sched-time">Departure Time</label>
+                  <input type="text" id="edit-sched-time" value="06:00:00" required />
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="edit-sched-bus">Assigned Bus</label>
+                <select id="edit-sched-bus">
+                  <option selected>Gazipur-01</option>
+                  <option>Gazipur-02</option>
+                  <option>Jatrabari-01</option>
+                  <option>Mirpur-01</option>
+                  <option>Dhanmondi-01</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="edit-sched-route">Assigned Route</label>
+                <select id="edit-sched-route">
+                  <option selected>Shibbari → Board Bazar → Tongi → Kuril → AIUB</option>
+                  <option>Shibbari → Bypass → Purbachal 300 Feet → AIUB</option>
+                  <option>Jatrabari → Sayedabad → Rampura → Badda → AIUB</option>
+                </select>
+              </div>
+              <div class="modal-footer">
+                <a href="#" class="btn-modal-cancel">Cancel</a>
+                <a href="#" class="btn-modal-submit">Update Schedule</a>
+              </div>
+            </form>
+          </div>
+        </div>
+
+        <!-- ==================== 3. VIEW MODAL ==================== -->
+        <div id="modal-view" class="modal-overlay" role="dialog" aria-labelledby="modal-view-title">
+          <div class="modal-box">
+            <div class="modal-header">
+              <h3 id="modal-view-title"><i class="fa-regular fa-eye"></i> Schedule Details</h3>
+              <a href="#" class="modal-close" aria-label="Close">&times;</a>
+            </div>
+            <div class="detail-list">
+              <div class="detail-item">
+                <span class="detail-label">Days of Week</span>
+                <span class="detail-value">Sunday - Thursday</span>
+              </div>
+              <div class="detail-item">
+                <span class="detail-label">Departure Time</span>
+                <span class="detail-value">06:00:00 AM</span>
+              </div>
+              <div class="detail-item">
+                <span class="detail-label">Assigned Bus</span>
+                <span class="detail-value"><span class="bus-link">Gazipur-01</span></span>
+              </div>
+              <div class="detail-item">
+                <span class="detail-label">Route</span>
+                <span class="detail-value">Shibbari → Board Bazar → Tongi → Kuril → AIUB</span>
+              </div>
+              <div class="detail-item">
+                <span class="detail-label">Seat Reservations</span>
+                <span class="detail-value">38 / 40 Seats Booked</span>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <a href="#" class="btn-modal-cancel">Close</a>
+              <a href="#modal-edit" class="btn-modal-submit">Edit Schedule</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- ==================== 4. DELETE MODAL ==================== -->
+        <div id="modal-delete" class="modal-overlay" role="dialog" aria-labelledby="modal-delete-title">
+          <div class="modal-box modal-box-sm">
+            <div class="modal-header modal-header-danger">
+              <h3 id="modal-delete-title"><i class="fa-solid fa-trash"></i> Delete Schedule</h3>
+              <a href="#" class="modal-close" aria-label="Close">&times;</a>
+            </div>
+            <div class="modal-body-text">
+              <p>Are you sure you want to delete the <strong>06:00:00 (Gazipur-01)</strong> schedule?</p>
+              <p class="text-danger-note">Students with active seat reservations on this trip will be notified.</p>
+            </div>
+            <div class="modal-footer">
+              <a href="#" class="btn-modal-cancel">Cancel</a>
+              <a href="#" class="btn-modal-danger">Confirm Delete</a>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+  </body>
+</html>

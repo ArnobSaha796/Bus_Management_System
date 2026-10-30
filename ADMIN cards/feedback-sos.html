@@ -1,0 +1,332 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Feedback &amp; SOS Alerts - AIUB BMS Admin Panel</title>
+    <!-- Font Awesome 6 for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <!-- External Section Stylesheet -->
+    <link rel="stylesheet" href="feedback-sos.css" />
+  </head>
+  <body>
+    <div class="admin-layout">
+      <!-- ==================== LEFT SIDEBAR ==================== -->
+      <aside class="sidebar">
+        <div class="sidebar-brand">
+          <div class="brand-logo-box">
+            <i class="fa-solid fa-bus"></i>
+          </div>
+          <div class="brand-text">
+            <h1 class="brand-title">AIUB BMS</h1>
+            <span class="brand-subtitle">ADMIN PANEL</span>
+          </div>
+        </div>
+
+        <nav class="sidebar-nav" aria-label="Admin Navigation">
+          <a href="index.html" class="nav-item">
+            <i class="fa-solid fa-house"></i>
+            <span>Home</span>
+          </a>
+        </nav>
+
+        <div class="sidebar-footer">
+          <div class="admin-profile">
+            <div class="admin-avatar">
+              <i class="fa-solid fa-user"></i>
+            </div>
+            <div class="admin-info">
+              <p class="admin-email">amiadmin@gmail.com</p>
+              <span class="admin-role">Administrator</span>
+            </div>
+          </div>
+          <button type="button" class="btn-logout">
+            <i class="fa-solid fa-right-from-bracket"></i>
+            <span>Log Out</span>
+          </button>
+        </div>
+      </aside>
+
+      <!-- ==================== MAIN CONTENT AREA ==================== -->
+      <main class="main-content">
+        <header class="page-header-row">
+          <div>
+            <h2 class="page-heading">FEEDBACK, COMPLAINTS &amp; SOS ALERTS</h2>
+            <div class="heading-underline"></div>
+          </div>
+          <div class="header-controls">
+            <div class="filter-tabs" role="tablist" aria-label="Issue Category Filter">
+              <button type="button" class="filter-tab active">All Issues (4)</button>
+              <button type="button" class="filter-tab">SOS Alerts (1)</button>
+              <button type="button" class="filter-tab">Complaints (2)</button>
+              <button type="button" class="filter-tab">Resolved (1)</button>
+            </div>
+            <a href="#modal-add" class="btn-primary-add">
+              <i class="fa-solid fa-plus"></i>
+              <span>Log Issue</span>
+            </a>
+          </div>
+        </header>
+
+        <!-- Feedback & SOS Table Card -->
+        <section class="table-card" aria-label="Feedback, Complaints and SOS Table">
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th>Submitted By</th>
+                <th>Category</th>
+                <th>Bus &amp; Route</th>
+                <th>Issue / Feedback Details</th>
+                <th>Status</th>
+                <th class="text-right">Actions</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  <div class="cell-stack">
+                    <span class="primary-text">Md. Shahriar Kabir Seium</span>
+                    <span class="sub-text">23-55092-3@student.aiub.edu</span>
+                  </div>
+                </td>
+                <td><span class="badge-category badge-sos"><i class="fa-solid fa-triangle-exclamation"></i> SOS Emergency</span></td>
+                <td>
+                  <div class="cell-stack">
+                    <span class="bus-link">Gazipur-01</span>
+                    <span class="sub-text">Near Tongi Flyover</span>
+                  </div>
+                </td>
+                <td>Bus engine overheated in heavy traffic; requesting backup bus support.</td>
+                <td><span class="status-open">Urgent</span></td>
+                <td class="text-right">
+                  <div class="icon-actions">
+                    <a href="#modal-edit" class="btn-resolve" title="Resolve Issue">Resolve</a>
+                    <a href="#modal-edit" class="btn-icon btn-icon-edit" title="Edit Issue"><i class="fa-regular fa-pen-to-square"></i></a>
+                    <a href="#modal-view" class="btn-icon btn-icon-view" title="View Details"><i class="fa-regular fa-eye"></i></a>
+                    <a href="#modal-delete" class="btn-icon btn-icon-delete" title="Delete Issue"><i class="fa-solid fa-trash"></i></a>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="cell-stack">
+                    <span class="primary-text">Md. Tahmidur Rahman Khan</span>
+                    <span class="sub-text">23-54334-3@student.aiub.edu</span>
+                  </div>
+                </td>
+                <td><span class="badge-category badge-complaint">Complaint</span></td>
+                <td>
+                  <div class="cell-stack">
+                    <span class="bus-link">Mirpur-01</span>
+                    <span class="sub-text">Agargaon Pickup Point</span>
+                  </div>
+                </td>
+                <td>AC cooling in the rear rows was low during the 09:00 AM trip.</td>
+                <td><span class="status-pending">In Review</span></td>
+                <td class="text-right">
+                  <div class="icon-actions">
+                    <a href="#modal-edit" class="btn-resolve" title="Resolve Issue">Resolve</a>
+                    <a href="#modal-edit" class="btn-icon btn-icon-edit" title="Edit Issue"><i class="fa-regular fa-pen-to-square"></i></a>
+                    <a href="#modal-view" class="btn-icon btn-icon-view" title="View Details"><i class="fa-regular fa-eye"></i></a>
+                    <a href="#modal-delete" class="btn-icon btn-icon-delete" title="Delete Issue"><i class="fa-solid fa-trash"></i></a>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="cell-stack">
+                    <span class="primary-text">Arnob Saha</span>
+                    <span class="sub-text">23-54613-3@student.aiub.edu</span>
+                  </div>
+                </td>
+                <td><span class="badge-category badge-complaint">Complaint</span></td>
+                <td>
+                  <div class="cell-stack">
+                    <span class="bus-link">Jatrabari-01</span>
+                    <span class="sub-text">Rampura Bridge Stop</span>
+                  </div>
+                </td>
+                <td>Bus arrived 12 minutes late at Rampura pickup point due to roadblock.</td>
+                <td><span class="status-pending">In Review</span></td>
+                <td class="text-right">
+                  <div class="icon-actions">
+                    <a href="#modal-edit" class="btn-resolve" title="Resolve Issue">Resolve</a>
+                    <a href="#modal-edit" class="btn-icon btn-icon-edit" title="Edit Issue"><i class="fa-regular fa-pen-to-square"></i></a>
+                    <a href="#modal-view" class="btn-icon btn-icon-view" title="View Details"><i class="fa-regular fa-eye"></i></a>
+                    <a href="#modal-delete" class="btn-icon btn-icon-delete" title="Delete Issue"><i class="fa-solid fa-trash"></i></a>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="cell-stack">
+                    <span class="primary-text">Aritra Mallick Joy</span>
+                    <span class="sub-text">23-54310-3@student.aiub.edu</span>
+                  </div>
+                </td>
+                <td><span class="badge-category badge-feedback">Feedback</span></td>
+                <td>
+                  <div class="cell-stack">
+                    <span class="bus-link">Dhanmondi-02</span>
+                    <span class="sub-text">Dhanmondi 27 Stop</span>
+                  </div>
+                </td>
+                <td>Live GPS tracking and seat reservation worked smoothly this morning.</td>
+                <td><span class="status-resolved">Resolved</span></td>
+                <td class="text-right">
+                  <div class="icon-actions">
+                    <a href="#modal-edit" class="btn-icon btn-icon-edit" title="Edit Issue"><i class="fa-regular fa-pen-to-square"></i></a>
+                    <a href="#modal-view" class="btn-icon btn-icon-view" title="View Details"><i class="fa-regular fa-eye"></i></a>
+                    <a href="#modal-delete" class="btn-icon btn-icon-delete" title="Delete Issue"><i class="fa-solid fa-trash"></i></a>
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+
+        <!-- ==================== 1. ADD MODAL ==================== -->
+        <div id="modal-add" class="modal-overlay" role="dialog" aria-labelledby="modal-add-title">
+          <div class="modal-box">
+            <div class="modal-header">
+              <h3 id="modal-add-title"><i class="fa-solid fa-comment-medical"></i> Log New Issue / SOS Alert</h3>
+              <a href="#" class="modal-close" aria-label="Close">&times;</a>
+            </div>
+            <form action="#" class="modal-form">
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="add-issue-user">Submitted By (Student Name/Email)</label>
+                  <input type="text" id="add-issue-user" placeholder="e.g., 23-54334-3@student.aiub.edu" required />
+                </div>
+                <div class="form-group">
+                  <label for="add-issue-cat">Category</label>
+                  <select id="add-issue-cat">
+                    <option>SOS Emergency</option>
+                    <option selected>Complaint</option>
+                    <option>Feedback</option>
+                  </select>
+                </div>
+              </div>
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="add-issue-bus">Bus Number</label>
+                  <select id="add-issue-bus">
+                    <option>Gazipur-01</option>
+                    <option>Mirpur-01</option>
+                    <option>Jatrabari-01</option>
+                    <option>Dhanmondi-02</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="add-issue-loc">Location / Stop</label>
+                  <input type="text" id="add-issue-loc" placeholder="e.g., Near Kuril Flyover" required />
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="add-issue-desc">Issue / Feedback Details</label>
+                <textarea id="add-issue-desc" rows="3" placeholder="Describe the transport issue, feedback, or SOS emergency..." required></textarea>
+              </div>
+              <div class="modal-footer">
+                <a href="#" class="btn-modal-cancel">Cancel</a>
+                <a href="#" class="btn-modal-submit">Save Issue</a>
+              </div>
+            </form>
+          </div>
+        </div>
+
+        <!-- ==================== 2. EDIT MODAL ==================== -->
+        <div id="modal-edit" class="modal-overlay" role="dialog" aria-labelledby="modal-edit-title">
+          <div class="modal-box">
+            <div class="modal-header">
+              <h3 id="modal-edit-title"><i class="fa-regular fa-pen-to-square"></i> Resolve / Update Issue</h3>
+              <a href="#" class="modal-close" aria-label="Close">&times;</a>
+            </div>
+            <form action="#" class="modal-form">
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="edit-issue-cat">Category</label>
+                  <select id="edit-issue-cat">
+                    <option selected>SOS Emergency</option>
+                    <option>Complaint</option>
+                    <option>Feedback</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="edit-issue-status">Resolution Status</label>
+                  <select id="edit-issue-status">
+                    <option>Urgent</option>
+                    <option>In Review</option>
+                    <option selected>Resolved</option>
+                  </select>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="edit-issue-note">Admin Resolution Note</label>
+                <textarea id="edit-issue-note" rows="3" required>Backup bus Gazipur-02 dispatched to Tongi Flyover; all students transferred safely.</textarea>
+              </div>
+              <div class="modal-footer">
+                <a href="#" class="btn-modal-cancel">Cancel</a>
+                <a href="#" class="btn-modal-submit">Update &amp; Resolve</a>
+              </div>
+            </form>
+          </div>
+        </div>
+
+        <!-- ==================== 3. VIEW MODAL ==================== -->
+        <div id="modal-view" class="modal-overlay" role="dialog" aria-labelledby="modal-view-title">
+          <div class="modal-box">
+            <div class="modal-header">
+              <h3 id="modal-view-title"><i class="fa-regular fa-eye"></i> Issue / SOS Alert Details</h3>
+              <a href="#" class="modal-close" aria-label="Close">&times;</a>
+            </div>
+            <div class="detail-list">
+              <div class="detail-item">
+                <span class="detail-label">Submitted By</span>
+                <span class="detail-value">Md. Shahriar Kabir Seium (23-55092-3)</span>
+              </div>
+              <div class="detail-item">
+                <span class="detail-label">Category</span>
+                <span class="detail-value">SOS Emergency Alert</span>
+              </div>
+              <div class="detail-item">
+                <span class="detail-label">Bus &amp; Location</span>
+                <span class="detail-value">Gazipur-01 · Near Tongi Flyover</span>
+              </div>
+              <div class="detail-item">
+                <span class="detail-label">Issue Description</span>
+                <span class="detail-value">Bus engine overheated in heavy traffic; requesting backup bus support.</span>
+              </div>
+              <div class="detail-item">
+                <span class="detail-label">Status</span>
+                <span class="detail-value status-open">Urgent Action Required</span>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <a href="#" class="btn-modal-cancel">Close</a>
+              <a href="#modal-edit" class="btn-modal-submit">Resolve Issue</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- ==================== 4. DELETE MODAL ==================== -->
+        <div id="modal-delete" class="modal-overlay" role="dialog" aria-labelledby="modal-delete-title">
+          <div class="modal-box modal-box-sm">
+            <div class="modal-header modal-header-danger">
+              <h3 id="modal-delete-title"><i class="fa-solid fa-trash"></i> Delete Issue Record</h3>
+              <a href="#" class="modal-close" aria-label="Close">&times;</a>
+            </div>
+            <div class="modal-body-text">
+              <p>Are you sure you want to delete this feedback/issue record submitted by <strong>Md. Shahriar Kabir Seium</strong>?</p>
+              <p class="text-danger-note">This record will be permanently removed from the admin log.</p>
+            </div>
+            <div class="modal-footer">
+              <a href="#" class="btn-modal-cancel">Cancel</a>
+              <a href="#" class="btn-modal-danger">Confirm Delete</a>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+  </body>
+</html>

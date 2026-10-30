@@ -1,0 +1,183 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AIUB Bus Management System - Admin Panel</title>
+    <meta name="description" content="Web-based campus transport management admin dashboard for AIUB Bus Management System." />
+    <meta property="og:title" content="AIUB Bus Management System - Admin Panel" />
+    <meta property="og:description" content="Web-based campus transport management admin dashboard for AIUB Bus Management System." />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <!-- Font Awesome 6 for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <!-- External Section Stylesheet -->
+    <link rel="stylesheet" href="dashboard.css" />
+  </head>
+  <body>
+    <div class="admin-layout">
+      <!-- ==================== LEFT SIDEBAR ==================== -->
+      <aside class="sidebar">
+        <!-- Brand Header -->
+        <div class="sidebar-brand">
+          <div class="brand-logo-box">
+            <i class="fa-solid fa-bus"></i>
+          </div>
+          <div class="brand-text">
+            <h1 class="brand-title">AIUB BMS</h1>
+            <span class="brand-subtitle">ADMIN PANEL</span>
+          </div>
+        </div>
+
+        <!-- Navigation Links -->
+        <nav class="sidebar-nav" aria-label="Admin Navigation">
+          <a href="index.html" class="nav-item active">
+            <i class="fa-solid fa-house"></i>
+            <span>Home</span>
+          </a>
+        </nav>
+
+        <!-- Admin Profile & Logout Footer -->
+        <div class="sidebar-footer">
+          <div class="admin-profile">
+            <div class="admin-avatar">
+              <i class="fa-solid fa-user"></i>
+            </div>
+            <div class="admin-info">
+              <p class="admin-email">amiadmin@gmail.com</p>
+              <span class="admin-role">Administrator</span>
+            </div>
+          </div>
+          <button type="button" class="btn-logout">
+            <i class="fa-solid fa-right-from-bracket"></i>
+            <span>Log Out</span>
+          </button>
+        </div>
+      </aside>
+
+      <!-- ==================== MAIN CONTENT AREA ==================== -->
+      <main class="main-content" id="dashboard">
+        <!-- Page Title Header -->
+        <header class="dashboard-header">
+          <h2 class="page-title">DASHBOARD</h2>
+          <div class="title-underline"></div>
+        </header>
+
+        <!-- Dashboard Module Cards Grid (All Proposal Section 1.5 Features) -->
+        <section class="dashboard-grid" aria-label="Administrator Modules">
+          <!-- 1. Pass Approvals & Payment Verification -->
+          <article class="dashboard-card" id="pass-approvals">
+            <div class="card-icon-circle">
+              <i class="fa-solid fa-hourglass-half"></i>
+            </div>
+            <h3 class="card-title">Pass Approvals</h3>
+            <p class="card-description">
+              Review, verify payments, and approve or decline student bus pass requests.
+            </p>
+            <a href="pending-passes.html" class="btn-card-action">Manage Requests</a>
+          </article>
+
+          <!-- 2. Manage Buses -->
+          <article class="dashboard-card" id="manage-buses">
+            <div class="card-icon-circle">
+              <i class="fa-solid fa-bus"></i>
+            </div>
+            <h3 class="card-title">Manage Buses</h3>
+            <p class="card-description">
+              Add, update or remove buses and schedules from the system.
+            </p>
+            <a href="buses.html" class="btn-card-action">Manage Buses</a>
+          </article>
+
+          <!-- 3. Manage Drivers -->
+          <article class="dashboard-card" id="manage-drivers">
+            <div class="card-icon-circle card-icon-driver">
+              <i class="fa-solid fa-user-tie"></i>
+            </div>
+            <h3 class="card-title">Manage Drivers</h3>
+            <p class="card-description">
+              Register new drivers and assign them to specific buses.
+            </p>
+            <a href="drivers.html" class="btn-card-action">Manage Drivers</a>
+          </article>
+
+          <!-- 4. Manage Routes -->
+          <article class="dashboard-card" id="manage-routes">
+            <div class="card-icon-circle">
+              <i class="fa-solid fa-route"></i>
+            </div>
+            <h3 class="card-title">Manage Routes</h3>
+            <p class="card-description">
+              Create or modify routes and their start/end points.
+            </p>
+            <a href="routes.html" class="btn-card-action">Manage Routes</a>
+          </article>
+
+          <!-- 5. Pickup Points -->
+          <article class="dashboard-card" id="pickup-points">
+            <div class="card-icon-circle">
+              <i class="fa-solid fa-location-dot"></i>
+            </div>
+            <h3 class="card-title">Pickup Points</h3>
+            <p class="card-description">
+              Add multiple pickup and drop-off points for each route.
+            </p>
+            <a href="pickup-points.html" class="btn-card-action">Manage Points</a>
+          </article>
+
+          <!-- 6. Manage Schedules -->
+          <article class="dashboard-card" id="manage-schedules">
+            <div class="card-icon-circle">
+              <i class="fa-regular fa-clock"></i>
+            </div>
+            <h3 class="card-title">Manage Schedules</h3>
+            <p class="card-description">
+              Set specific departure times and assign buses to routes.
+            </p>
+            <a href="schedules.html" class="btn-card-action">Manage Schedules</a>
+          </article>
+
+          <!-- 7. Student & Parent Management (Proposal Role 03 Feature) -->
+          <article class="dashboard-card" id="students-parents">
+            <div class="card-icon-circle">
+              <i class="fa-solid fa-users-gear"></i>
+            </div>
+            <h3 class="card-title">Student &amp; Parent Accounts</h3>
+            <p class="card-description">
+              View student registrations, approve or deactivate accounts, and manage linked parents.
+            </p>
+            <a href="students-parents.html" class="btn-card-action">Manage Accounts</a>
+          </article>
+
+          <!-- 8. Notifications & Transport Reports (Proposal Role 03 Feature) -->
+          <article class="dashboard-card" id="notifications-reports">
+            <div class="card-icon-circle">
+              <i class="fa-solid fa-chart-pie"></i>
+            </div>
+            <h3 class="card-title">Notifications &amp; Reports</h3>
+            <p class="card-description">
+              Send arrival/departure updates to students &amp; parents and generate transport reports.
+            </p>
+            <a href="notifications-reports.html" class="btn-card-action">Reports &amp; Alerts</a>
+          </article>
+
+          <!-- 9. Feedback, Complaints & SOS (Proposal Role 03 Feature) -->
+          <article class="dashboard-card" id="feedback-sos">
+            <div class="card-icon-circle">
+              <i class="fa-solid fa-comment-medical"></i>
+            </div>
+            <h3 class="card-title">Feedback &amp; SOS Alerts</h3>
+            <p class="card-description">
+              Review and resolve student feedback, transport complaints, and emergency SOS alerts.
+            </p>
+            <a href="feedback-sos.html" class="btn-card-action">Resolve Issues</a>
+          </article>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>

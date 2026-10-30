@@ -1,0 +1,296 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Notifications &amp; Reports - AIUB BMS Admin Panel</title>
+    <!-- Font Awesome 6 for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <!-- External Section Stylesheet -->
+    <link rel="stylesheet" href="notifications-reports.css" />
+  </head>
+  <body>
+    <div class="admin-layout">
+      <!-- ==================== LEFT SIDEBAR ==================== -->
+      <aside class="sidebar">
+        <div class="sidebar-brand">
+          <div class="brand-logo-box">
+            <i class="fa-solid fa-bus"></i>
+          </div>
+          <div class="brand-text">
+            <h1 class="brand-title">AIUB BMS</h1>
+            <span class="brand-subtitle">ADMIN PANEL</span>
+          </div>
+        </div>
+
+        <nav class="sidebar-nav" aria-label="Admin Navigation">
+          <a href="index.html" class="nav-item">
+            <i class="fa-solid fa-house"></i>
+            <span>Home</span>
+          </a>
+        </nav>
+
+        <div class="sidebar-footer">
+          <div class="admin-profile">
+            <div class="admin-avatar">
+              <i class="fa-solid fa-user"></i>
+            </div>
+            <div class="admin-info">
+              <p class="admin-email">amiadmin@gmail.com</p>
+              <span class="admin-role">Administrator</span>
+            </div>
+          </div>
+          <button type="button" class="btn-logout">
+            <i class="fa-solid fa-right-from-bracket"></i>
+            <span>Log Out</span>
+          </button>
+        </div>
+      </aside>
+
+      <!-- ==================== MAIN CONTENT AREA ==================== -->
+      <main class="main-content">
+        <header class="page-header-row">
+          <div>
+            <h2 class="page-heading">NOTIFICATIONS &amp; TRANSPORT REPORTS</h2>
+            <div class="heading-underline"></div>
+          </div>
+          <a href="#modal-add" class="btn-primary-add">
+            <i class="fa-solid fa-plus"></i>
+            <span>Send Notification</span>
+          </a>
+        </header>
+
+        <!-- Summary Report KPI Strip -->
+        <section class="report-summary-grid" aria-label="Transport Summary Metrics">
+          <div class="summary-card">
+            <span class="summary-label">Active Buses Today</span>
+            <strong class="summary-value">08 / 08</strong>
+          </div>
+          <div class="summary-card">
+            <span class="summary-label">Total Seat Reservations</span>
+            <strong class="summary-value">296 / 320</strong>
+          </div>
+          <div class="summary-card">
+            <span class="summary-label">Active Monthly Passes</span>
+            <strong class="summary-value">312 Passes</strong>
+          </div>
+          <div class="summary-card">
+            <span class="summary-label">On-Time Arrival Rate</span>
+            <strong class="summary-value">96.4%</strong>
+          </div>
+        </section>
+
+        <!-- Sent Notifications & Travel Logs Table -->
+        <section class="table-card" aria-label="Notifications and Travel History Table">
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th>Notification Title &amp; Message</th>
+                <th>Target Audience</th>
+                <th>Alert Type</th>
+                <th>Sent Time</th>
+                <th class="text-right">Actions</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  <div class="cell-stack">
+                    <span class="primary-text">Mirpur-01 Morning Bus Departed</span>
+                    <span class="sub-text">Bus Mirpur-01 departed Mirpur 12 on schedule at 06:00 AM.</span>
+                  </div>
+                </td>
+                <td>Students &amp; Linked Parents (Mirpur-01)</td>
+                <td><span class="badge-type badge-departure">Departure Alert</span></td>
+                <td>Today, 06:02 AM</td>
+                <td class="text-right">
+                  <div class="icon-actions">
+                    <a href="#modal-edit" class="btn-icon btn-icon-edit" title="Edit Notification"><i class="fa-regular fa-pen-to-square"></i></a>
+                    <a href="#modal-view" class="btn-icon btn-icon-view" title="View Report"><i class="fa-regular fa-eye"></i></a>
+                    <a href="#modal-delete" class="btn-icon btn-icon-delete" title="Delete Alert"><i class="fa-solid fa-trash"></i></a>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="cell-stack">
+                    <span class="primary-text">Gazipur-01 Arrived at AIUB Campus</span>
+                    <span class="sub-text">All 38 reserved students safely arrived at Kuril AIUB Gate.</span>
+                  </div>
+                </td>
+                <td>Students &amp; Linked Parents (Gazipur-01)</td>
+                <td><span class="badge-type badge-arrival">Arrival Alert</span></td>
+                <td>Today, 07:40 AM</td>
+                <td class="text-right">
+                  <div class="icon-actions">
+                    <a href="#modal-edit" class="btn-icon btn-icon-edit" title="Edit Notification"><i class="fa-regular fa-pen-to-square"></i></a>
+                    <a href="#modal-view" class="btn-icon btn-icon-view" title="View Report"><i class="fa-regular fa-eye"></i></a>
+                    <a href="#modal-delete" class="btn-icon btn-icon-delete" title="Delete Alert"><i class="fa-solid fa-trash"></i></a>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="cell-stack">
+                    <span class="primary-text">November 2026 Monthly Pass Renewal Open</span>
+                    <span class="sub-text">Students can renew their monthly bus pass before Nov 05, 2026.</span>
+                  </div>
+                </td>
+                <td>All Registered Students &amp; Parents</td>
+                <td><span class="badge-type badge-announcement">Announcement</span></td>
+                <td>Oct 25, 2026</td>
+                <td class="text-right">
+                  <div class="icon-actions">
+                    <a href="#modal-edit" class="btn-icon btn-icon-edit" title="Edit Notification"><i class="fa-regular fa-pen-to-square"></i></a>
+                    <a href="#modal-view" class="btn-icon btn-icon-view" title="View Report"><i class="fa-regular fa-eye"></i></a>
+                    <a href="#modal-delete" class="btn-icon btn-icon-delete" title="Delete Alert"><i class="fa-solid fa-trash"></i></a>
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+
+        <!-- ==================== 1. ADD MODAL ==================== -->
+        <div id="modal-add" class="modal-overlay" role="dialog" aria-labelledby="modal-add-title">
+          <div class="modal-box">
+            <div class="modal-header">
+              <h3 id="modal-add-title"><i class="fa-solid fa-paper-plane"></i> Send New Notification</h3>
+              <a href="#" class="modal-close" aria-label="Close">&times;</a>
+            </div>
+            <form action="#" class="modal-form">
+              <div class="form-group">
+                <label for="add-notif-title">Notification Title</label>
+                <input type="text" id="add-notif-title" placeholder="e.g., Dhanmondi-01 Bus Arrived at AIUB" required />
+              </div>
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="add-notif-target">Target Audience</label>
+                  <select id="add-notif-target">
+                    <option>All Registered Students &amp; Parents</option>
+                    <option>Students &amp; Parents (Mirpur-01)</option>
+                    <option>Students &amp; Parents (Gazipur-01)</option>
+                    <option>Students &amp; Parents (Jatrabari-01)</option>
+                    <option>Students &amp; Parents (Dhanmondi-01)</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="add-notif-type">Alert Type</label>
+                  <select id="add-notif-type">
+                    <option>Departure Alert</option>
+                    <option>Arrival Alert</option>
+                    <option>Announcement</option>
+                  </select>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="add-notif-msg">Notification Message</label>
+                <textarea id="add-notif-msg" rows="3" placeholder="Enter arrival/departure update or campus transport announcement..." required></textarea>
+              </div>
+              <div class="modal-footer">
+                <a href="#" class="btn-modal-cancel">Cancel</a>
+                <a href="#" class="btn-modal-submit">Broadcast Alert</a>
+              </div>
+            </form>
+          </div>
+        </div>
+
+        <!-- ==================== 2. EDIT MODAL ==================== -->
+        <div id="modal-edit" class="modal-overlay" role="dialog" aria-labelledby="modal-edit-title">
+          <div class="modal-box">
+            <div class="modal-header">
+              <h3 id="modal-edit-title"><i class="fa-regular fa-pen-to-square"></i> Edit Notification</h3>
+              <a href="#" class="modal-close" aria-label="Close">&times;</a>
+            </div>
+            <form action="#" class="modal-form">
+              <div class="form-group">
+                <label for="edit-notif-title">Notification Title</label>
+                <input type="text" id="edit-notif-title" value="Mirpur-01 Morning Bus Departed" required />
+              </div>
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="edit-notif-target">Target Audience</label>
+                  <select id="edit-notif-target">
+                    <option selected>Students &amp; Linked Parents (Mirpur-01)</option>
+                    <option>All Registered Students &amp; Parents</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="edit-notif-type">Alert Type</label>
+                  <select id="edit-notif-type">
+                    <option selected>Departure Alert</option>
+                    <option>Arrival Alert</option>
+                    <option>Announcement</option>
+                  </select>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="edit-notif-msg">Message Content</label>
+                <textarea id="edit-notif-msg" rows="3" required>Bus Mirpur-01 departed Mirpur 12 on schedule at 06:00 AM.</textarea>
+              </div>
+              <div class="modal-footer">
+                <a href="#" class="btn-modal-cancel">Cancel</a>
+                <a href="#" class="btn-modal-submit">Update Alert</a>
+              </div>
+            </form>
+          </div>
+        </div>
+
+        <!-- ==================== 3. VIEW MODAL ==================== -->
+        <div id="modal-view" class="modal-overlay" role="dialog" aria-labelledby="modal-view-title">
+          <div class="modal-box">
+            <div class="modal-header">
+              <h3 id="modal-view-title"><i class="fa-regular fa-eye"></i> Notification &amp; Report Log</h3>
+              <a href="#" class="modal-close" aria-label="Close">&times;</a>
+            </div>
+            <div class="detail-list">
+              <div class="detail-item">
+                <span class="detail-label">Title</span>
+                <span class="detail-value">Mirpur-01 Morning Bus Departed</span>
+              </div>
+              <div class="detail-item">
+                <span class="detail-label">Target Audience</span>
+                <span class="detail-value">Students &amp; Linked Parents (Mirpur-01)</span>
+              </div>
+              <div class="detail-item">
+                <span class="detail-label">Alert Category</span>
+                <span class="detail-value">Departure Alert</span>
+              </div>
+              <div class="detail-item">
+                <span class="detail-label">Delivery Status</span>
+                <span class="detail-value">Delivered to 40 Students &amp; 40 Parents</span>
+              </div>
+              <div class="detail-item">
+                <span class="detail-label">Message</span>
+                <span class="detail-value">Bus Mirpur-01 departed Mirpur 12 on schedule at 06:00 AM.</span>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <a href="#" class="btn-modal-cancel">Close</a>
+              <a href="#modal-edit" class="btn-modal-submit">Edit Notification</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- ==================== 4. DELETE MODAL ==================== -->
+        <div id="modal-delete" class="modal-overlay" role="dialog" aria-labelledby="modal-delete-title">
+          <div class="modal-box modal-box-sm">
+            <div class="modal-header modal-header-danger">
+              <h3 id="modal-delete-title"><i class="fa-solid fa-trash"></i> Delete Notification Log</h3>
+              <a href="#" class="modal-close" aria-label="Close">&times;</a>
+            </div>
+            <div class="modal-body-text">
+              <p>Are you sure you want to delete the notification log <strong>Mirpur-01 Morning Bus Departed</strong>?</p>
+              <p class="text-danger-note">This entry will be permanently removed from transport history.</p>
+            </div>
+            <div class="modal-footer">
+              <a href="#" class="btn-modal-cancel">Cancel</a>
+              <a href="#" class="btn-modal-danger">Confirm Delete</a>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+  </body>
+</html>

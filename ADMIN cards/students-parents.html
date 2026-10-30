@@ -1,0 +1,348 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Student &amp; Parent Accounts - AIUB BMS Admin Panel</title>
+    <!-- Font Awesome 6 for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <!-- External Section Stylesheet -->
+    <link rel="stylesheet" href="students-parents.css" />
+  </head>
+  <body>
+    <div class="admin-layout">
+      <!-- ==================== LEFT SIDEBAR ==================== -->
+      <aside class="sidebar">
+        <div class="sidebar-brand">
+          <div class="brand-logo-box">
+            <i class="fa-solid fa-bus"></i>
+          </div>
+          <div class="brand-text">
+            <h1 class="brand-title">AIUB BMS</h1>
+            <span class="brand-subtitle">ADMIN PANEL</span>
+          </div>
+        </div>
+
+        <nav class="sidebar-nav" aria-label="Admin Navigation">
+          <a href="index.html" class="nav-item">
+            <i class="fa-solid fa-house"></i>
+            <span>Home</span>
+          </a>
+        </nav>
+
+        <div class="sidebar-footer">
+          <div class="admin-profile">
+            <div class="admin-avatar">
+              <i class="fa-solid fa-user"></i>
+            </div>
+            <div class="admin-info">
+              <p class="admin-email">amiadmin@gmail.com</p>
+              <span class="admin-role">Administrator</span>
+            </div>
+          </div>
+          <button type="button" class="btn-logout">
+            <i class="fa-solid fa-right-from-bracket"></i>
+            <span>Log Out</span>
+          </button>
+        </div>
+      </aside>
+
+      <!-- ==================== MAIN CONTENT AREA ==================== -->
+      <main class="main-content">
+        <header class="page-header-row">
+          <div>
+            <h2 class="page-heading">STUDENT &amp; PARENT ACCOUNTS</h2>
+            <div class="heading-underline"></div>
+          </div>
+          <div class="header-controls">
+            <div class="filter-tabs" role="tablist" aria-label="Account Filter">
+              <button type="button" class="filter-tab active">All Accounts (4)</button>
+              <button type="button" class="filter-tab">Pending (1)</button>
+              <button type="button" class="filter-tab">Approved (3)</button>
+            </div>
+            <a href="#modal-add" class="btn-primary-add">
+              <i class="fa-solid fa-plus"></i>
+              <span>Add Account</span>
+            </a>
+          </div>
+        </header>
+
+        <!-- Student & Parent Accounts Table Card -->
+        <section class="table-card" aria-label="Student and Parent Accounts Table">
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th>Student Name &amp; ID</th>
+                <th>Assigned Bus &amp; Pickup</th>
+                <th>Linked Parent / Guardian</th>
+                <th>Account Status</th>
+                <th class="text-right">Actions</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  <div class="cell-stack">
+                    <span class="primary-text">Md. Tahmidur Rahman Khan</span>
+                    <span class="sub-text">ID: 23-54334-3 · Dept. of Computer Science</span>
+                  </div>
+                </td>
+                <td>
+                  <div class="cell-stack">
+                    <span class="bus-link">Mirpur-01</span>
+                    <span class="sub-text">Pickup: Mirpur 12 Metro Station</span>
+                  </div>
+                </td>
+                <td>
+                  <div class="cell-stack">
+                    <span class="primary-text">Md. Habibur Rahman Khan</span>
+                    <span class="sub-text">+880 1711-234567 · Parent Linked</span>
+                  </div>
+                </td>
+                <td><span class="badge-status badge-active">Approved</span></td>
+                <td class="text-right">
+                  <div class="icon-actions">
+                    <a href="#modal-edit" class="btn-icon btn-icon-edit" title="Edit Account"><i class="fa-regular fa-pen-to-square"></i></a>
+                    <a href="#modal-view" class="btn-icon btn-icon-view" title="View Account"><i class="fa-regular fa-eye"></i></a>
+                    <a href="#modal-delete" class="btn-icon btn-icon-delete" title="Deactivate / Delete"><i class="fa-solid fa-trash"></i></a>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="cell-stack">
+                    <span class="primary-text">Arnob Saha</span>
+                    <span class="sub-text">ID: 23-54613-3 · Dept. of Computer Science</span>
+                  </div>
+                </td>
+                <td>
+                  <div class="cell-stack">
+                    <span class="bus-link">Jatrabari-01</span>
+                    <span class="sub-text">Pickup: Jatrabari Ideal School Gate</span>
+                  </div>
+                </td>
+                <td>
+                  <div class="cell-stack">
+                    <span class="primary-text">Ashok Kumar Saha</span>
+                    <span class="sub-text">+880 1817-998812 · Parent Linked</span>
+                  </div>
+                </td>
+                <td><span class="badge-status badge-active">Approved</span></td>
+                <td class="text-right">
+                  <div class="icon-actions">
+                    <a href="#modal-edit" class="btn-icon btn-icon-edit" title="Edit Account"><i class="fa-regular fa-pen-to-square"></i></a>
+                    <a href="#modal-view" class="btn-icon btn-icon-view" title="View Account"><i class="fa-regular fa-eye"></i></a>
+                    <a href="#modal-delete" class="btn-icon btn-icon-delete" title="Deactivate / Delete"><i class="fa-solid fa-trash"></i></a>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="cell-stack">
+                    <span class="primary-text">Aritra Mallick Joy</span>
+                    <span class="sub-text">ID: 23-54310-3 · Dept. of Computer Science</span>
+                  </div>
+                </td>
+                <td>
+                  <div class="cell-stack">
+                    <span class="bus-link">Dhanmondi-02</span>
+                    <span class="sub-text">Pickup: Dhanmondi 27 Rapa Plaza</span>
+                  </div>
+                </td>
+                <td>
+                  <div class="cell-stack">
+                    <span class="primary-text">Subrata Mallick</span>
+                    <span class="sub-text">+880 1914-552019 · Parent Linked</span>
+                  </div>
+                </td>
+                <td><span class="badge-status badge-active">Approved</span></td>
+                <td class="text-right">
+                  <div class="icon-actions">
+                    <a href="#modal-edit" class="btn-icon btn-icon-edit" title="Edit Account"><i class="fa-regular fa-pen-to-square"></i></a>
+                    <a href="#modal-view" class="btn-icon btn-icon-view" title="View Account"><i class="fa-regular fa-eye"></i></a>
+                    <a href="#modal-delete" class="btn-icon btn-icon-delete" title="Deactivate / Delete"><i class="fa-solid fa-trash"></i></a>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="cell-stack">
+                    <span class="primary-text">Md. Shahriar Kabir Seium</span>
+                    <span class="sub-text">ID: 23-55092-3 · Dept. of Computer Science</span>
+                  </div>
+                </td>
+                <td>
+                  <div class="cell-stack">
+                    <span class="bus-link">Gazipur-01</span>
+                    <span class="sub-text">Pickup: Shibbari Intersection</span>
+                  </div>
+                </td>
+                <td>
+                  <div class="cell-stack">
+                    <span class="primary-text">Md. Humayun Kabir</span>
+                    <span class="sub-text">+880 1715-663201 · Verification Pending</span>
+                  </div>
+                </td>
+                <td><span class="badge-status badge-pending">Pending Approval</span></td>
+                <td class="text-right">
+                  <div class="icon-actions">
+                    <a href="#modal-edit" class="btn-action btn-approve" title="Approve Account">Approve</a>
+                    <a href="#modal-edit" class="btn-icon btn-icon-edit" title="Edit Account"><i class="fa-regular fa-pen-to-square"></i></a>
+                    <a href="#modal-view" class="btn-icon btn-icon-view" title="View Account"><i class="fa-regular fa-eye"></i></a>
+                    <a href="#modal-delete" class="btn-icon btn-icon-delete" title="Deactivate / Delete"><i class="fa-solid fa-trash"></i></a>
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+
+        <!-- ==================== 1. ADD MODAL ==================== -->
+        <div id="modal-add" class="modal-overlay" role="dialog" aria-labelledby="modal-add-title">
+          <div class="modal-box">
+            <div class="modal-header">
+              <h3 id="modal-add-title"><i class="fa-solid fa-users-gear"></i> Add Student &amp; Linked Parent</h3>
+              <a href="#" class="modal-close" aria-label="Close">&times;</a>
+            </div>
+            <form action="#" class="modal-form">
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="add-stu-name">Student Full Name</label>
+                  <input type="text" id="add-stu-name" placeholder="e.g., Tanvir Ahmed" required />
+                </div>
+                <div class="form-group">
+                  <label for="add-stu-id">University ID</label>
+                  <input type="text" id="add-stu-id" placeholder="e.g., 23-54999-3" required />
+                </div>
+              </div>
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="add-stu-bus">Assigned Bus</label>
+                  <select id="add-stu-bus">
+                    <option>Mirpur-01</option>
+                    <option>Gazipur-01</option>
+                    <option>Jatrabari-01</option>
+                    <option>Dhanmondi-02</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="add-stu-pickup">Pickup Point</label>
+                  <input type="text" id="add-stu-pickup" placeholder="e.g., Mirpur 12 Metro Station" required />
+                </div>
+              </div>
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="add-parent-name">Parent / Guardian Name</label>
+                  <input type="text" id="add-parent-name" placeholder="Parent Full Name" required />
+                </div>
+                <div class="form-group">
+                  <label for="add-parent-phone">Parent Phone Number</label>
+                  <input type="tel" id="add-parent-phone" placeholder="+880 1711-000000" required />
+                </div>
+              </div>
+              <div class="modal-footer">
+                <a href="#" class="btn-modal-cancel">Cancel</a>
+                <a href="#" class="btn-modal-submit">Create Account</a>
+              </div>
+            </form>
+          </div>
+        </div>
+
+        <!-- ==================== 2. EDIT MODAL ==================== -->
+        <div id="modal-edit" class="modal-overlay" role="dialog" aria-labelledby="modal-edit-title">
+          <div class="modal-box">
+            <div class="modal-header">
+              <h3 id="modal-edit-title"><i class="fa-regular fa-pen-to-square"></i> Edit Student &amp; Parent Account</h3>
+              <a href="#" class="modal-close" aria-label="Close">&times;</a>
+            </div>
+            <form action="#" class="modal-form">
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="edit-stu-name">Student Full Name</label>
+                  <input type="text" id="edit-stu-name" value="Md. Tahmidur Rahman Khan" required />
+                </div>
+                <div class="form-group">
+                  <label for="edit-stu-id">University ID</label>
+                  <input type="text" id="edit-stu-id" value="23-54334-3" required />
+                </div>
+              </div>
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="edit-parent-name">Linked Parent Name</label>
+                  <input type="text" id="edit-parent-name" value="Md. Habibur Rahman Khan" required />
+                </div>
+                <div class="form-group">
+                  <label for="edit-acc-status">Account Status</label>
+                  <select id="edit-acc-status">
+                    <option selected>Approved</option>
+                    <option>Pending Approval</option>
+                    <option>Deactivated</option>
+                  </select>
+                </div>
+              </div>
+              <div class="modal-footer">
+                <a href="#" class="btn-modal-cancel">Cancel</a>
+                <a href="#" class="btn-modal-submit">Update Account</a>
+              </div>
+            </form>
+          </div>
+        </div>
+
+        <!-- ==================== 3. VIEW MODAL ==================== -->
+        <div id="modal-view" class="modal-overlay" role="dialog" aria-labelledby="modal-view-title">
+          <div class="modal-box">
+            <div class="modal-header">
+              <h3 id="modal-view-title"><i class="fa-regular fa-eye"></i> Student &amp; Parent Details</h3>
+              <a href="#" class="modal-close" aria-label="Close">&times;</a>
+            </div>
+            <div class="detail-list">
+              <div class="detail-item">
+                <span class="detail-label">Student Name &amp; ID</span>
+                <span class="detail-value">Md. Tahmidur Rahman Khan (23-54334-3)</span>
+              </div>
+              <div class="detail-item">
+                <span class="detail-label">Department</span>
+                <span class="detail-value">Computer Science (FST)</span>
+              </div>
+              <div class="detail-item">
+                <span class="detail-label">Assigned Bus &amp; Stop</span>
+                <span class="detail-value">Mirpur-01 · Mirpur 12 Metro Station</span>
+              </div>
+              <div class="detail-item">
+                <span class="detail-label">Linked Parent / Guardian</span>
+                <span class="detail-value">Md. Habibur Rahman Khan (+880 1711-234567)</span>
+              </div>
+              <div class="detail-item">
+                <span class="detail-label">Account Status</span>
+                <span class="detail-value"><span class="badge-status badge-active">Approved</span></span>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <a href="#" class="btn-modal-cancel">Close</a>
+              <a href="#modal-edit" class="btn-modal-submit">Edit Account</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- ==================== 4. DELETE MODAL ==================== -->
+        <div id="modal-delete" class="modal-overlay" role="dialog" aria-labelledby="modal-delete-title">
+          <div class="modal-box modal-box-sm">
+            <div class="modal-header modal-header-danger">
+              <h3 id="modal-delete-title"><i class="fa-solid fa-trash"></i> Deactivate / Delete Account</h3>
+              <a href="#" class="modal-close" aria-label="Close">&times;</a>
+            </div>
+            <div class="modal-body-text">
+              <p>Are you sure you want to deactivate and remove the account for <strong>Md. Tahmidur Rahman Khan (23-54334-3)</strong>?</p>
+              <p class="text-danger-note">Both the student and linked parent portal access will be revoked.</p>
+            </div>
+            <div class="modal-footer">
+              <a href="#" class="btn-modal-cancel">Cancel</a>
+              <a href="#" class="btn-modal-danger">Confirm Deactivate</a>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+  </body>
+</html>

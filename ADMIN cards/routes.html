@@ -1,0 +1,309 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Manage Routes - AIUB BMS Admin Panel</title>
+    <!-- Font Awesome 6 for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <!-- External Section Stylesheet -->
+    <link rel="stylesheet" href="routes.css" />
+  </head>
+  <body>
+    <div class="admin-layout">
+      <!-- ==================== LEFT SIDEBAR ==================== -->
+      <aside class="sidebar">
+        <div class="sidebar-brand">
+          <div class="brand-logo-box">
+            <i class="fa-solid fa-bus"></i>
+          </div>
+          <div class="brand-text">
+            <h1 class="brand-title">AIUB BMS</h1>
+            <span class="brand-subtitle">ADMIN PANEL</span>
+          </div>
+        </div>
+
+        <nav class="sidebar-nav" aria-label="Admin Navigation">
+          <a href="index.html" class="nav-item">
+            <i class="fa-solid fa-house"></i>
+            <span>Home</span>
+          </a>
+        </nav>
+
+        <div class="sidebar-footer">
+          <div class="admin-profile">
+            <div class="admin-avatar">
+              <i class="fa-solid fa-user"></i>
+            </div>
+            <div class="admin-info">
+              <p class="admin-email">amiadmin@gmail.com</p>
+              <span class="admin-role">Administrator</span>
+            </div>
+          </div>
+          <button type="button" class="btn-logout">
+            <i class="fa-solid fa-right-from-bracket"></i>
+            <span>Log Out</span>
+          </button>
+        </div>
+      </aside>
+
+      <!-- ==================== MAIN CONTENT AREA ==================== -->
+      <main class="main-content">
+        <header class="page-header-row">
+          <div>
+            <h2 class="page-heading">MANAGE ROUTES &amp; PICKUP POINTS</h2>
+            <div class="heading-underline"></div>
+          </div>
+          <a href="#modal-add" class="btn-primary-add">
+            <i class="fa-solid fa-plus"></i>
+            <span>Add New Route</span>
+          </a>
+        </header>
+
+        <!-- Manage Routes Table Card -->
+        <section class="table-card" aria-label="Manage Routes Table">
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th>Route Name</th>
+                <th>Start Point</th>
+                <th>End Point</th>
+                <th>Pickup Points</th>
+                <th class="text-right">Actions</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="fw-bold">Shibbari <i class="fa-solid fa-arrow-right route-arrow"></i> Board Bazar <i class="fa-solid fa-arrow-right route-arrow"></i> Tongi <i class="fa-solid fa-arrow-right route-arrow"></i> Kuril <i class="fa-solid fa-arrow-right route-arrow"></i> AIUB</td>
+                <td>Gazipur</td>
+                <td>AIUB</td>
+                <td>4 Stops</td>
+                <td class="text-right">
+                  <div class="icon-actions">
+                    <a href="#modal-edit" class="btn-icon btn-icon-edit" title="Edit Route"><i class="fa-regular fa-pen-to-square"></i></a>
+                    <a href="#modal-view" class="btn-icon btn-icon-view" title="View Route"><i class="fa-regular fa-eye"></i></a>
+                    <a href="#modal-delete" class="btn-icon btn-icon-delete" title="Delete Route"><i class="fa-solid fa-trash"></i></a>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td class="fw-bold">Shibbari <i class="fa-solid fa-arrow-right route-arrow"></i> Bypass <i class="fa-solid fa-arrow-right route-arrow"></i> Purbachal 300 Feet <i class="fa-solid fa-arrow-right route-arrow"></i> AIUB</td>
+                <td>Gazipur</td>
+                <td>AIUB</td>
+                <td>3 Stops</td>
+                <td class="text-right">
+                  <div class="icon-actions">
+                    <a href="#modal-edit" class="btn-icon btn-icon-edit" title="Edit Route"><i class="fa-regular fa-pen-to-square"></i></a>
+                    <a href="#modal-view" class="btn-icon btn-icon-view" title="View Route"><i class="fa-regular fa-eye"></i></a>
+                    <a href="#modal-delete" class="btn-icon btn-icon-delete" title="Delete Route"><i class="fa-solid fa-trash"></i></a>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td class="fw-bold">Jatrabari <i class="fa-solid fa-arrow-right route-arrow"></i> Sayedabad <i class="fa-solid fa-arrow-right route-arrow"></i> Rampura <i class="fa-solid fa-arrow-right route-arrow"></i> Badda <i class="fa-solid fa-arrow-right route-arrow"></i> AIUB</td>
+                <td>Jatrabari</td>
+                <td>AIUB</td>
+                <td>4 Stops</td>
+                <td class="text-right">
+                  <div class="icon-actions">
+                    <a href="#modal-edit" class="btn-icon btn-icon-edit" title="Edit Route"><i class="fa-regular fa-pen-to-square"></i></a>
+                    <a href="#modal-view" class="btn-icon btn-icon-view" title="View Route"><i class="fa-regular fa-eye"></i></a>
+                    <a href="#modal-delete" class="btn-icon btn-icon-delete" title="Delete Route"><i class="fa-solid fa-trash"></i></a>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td class="fw-bold">Jatrabari <i class="fa-solid fa-arrow-right route-arrow"></i> Hanif Flyover <i class="fa-solid fa-arrow-right route-arrow"></i> Hatirjheel <i class="fa-solid fa-arrow-right route-arrow"></i> AIUB</td>
+                <td>Jatrabari</td>
+                <td>AIUB</td>
+                <td>3 Stops</td>
+                <td class="text-right">
+                  <div class="icon-actions">
+                    <a href="#modal-edit" class="btn-icon btn-icon-edit" title="Edit Route"><i class="fa-regular fa-pen-to-square"></i></a>
+                    <a href="#modal-view" class="btn-icon btn-icon-view" title="View Route"><i class="fa-regular fa-eye"></i></a>
+                    <a href="#modal-delete" class="btn-icon btn-icon-delete" title="Delete Route"><i class="fa-solid fa-trash"></i></a>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td class="fw-bold">Mirpur 12 <i class="fa-solid fa-arrow-right route-arrow"></i> Agargaon <i class="fa-solid fa-arrow-right route-arrow"></i> Mohakhali <i class="fa-solid fa-arrow-right route-arrow"></i> Banani <i class="fa-solid fa-arrow-right route-arrow"></i> AIUB</td>
+                <td>Mirpur</td>
+                <td>AIUB</td>
+                <td>4 Stops</td>
+                <td class="text-right">
+                  <div class="icon-actions">
+                    <a href="#modal-edit" class="btn-icon btn-icon-edit" title="Edit Route"><i class="fa-regular fa-pen-to-square"></i></a>
+                    <a href="#modal-view" class="btn-icon btn-icon-view" title="View Route"><i class="fa-regular fa-eye"></i></a>
+                    <a href="#modal-delete" class="btn-icon btn-icon-delete" title="Delete Route"><i class="fa-solid fa-trash"></i></a>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td class="fw-bold">Mirpur 1 <i class="fa-solid fa-arrow-right route-arrow"></i> Cantonment <i class="fa-solid fa-arrow-right route-arrow"></i> Kalshi <i class="fa-solid fa-arrow-right route-arrow"></i> Kuril <i class="fa-solid fa-arrow-right route-arrow"></i> AIUB</td>
+                <td>Mirpur</td>
+                <td>AIUB</td>
+                <td>4 Stops</td>
+                <td class="text-right">
+                  <div class="icon-actions">
+                    <a href="#modal-edit" class="btn-icon btn-icon-edit" title="Edit Route"><i class="fa-regular fa-pen-to-square"></i></a>
+                    <a href="#modal-view" class="btn-icon btn-icon-view" title="View Route"><i class="fa-regular fa-eye"></i></a>
+                    <a href="#modal-delete" class="btn-icon btn-icon-delete" title="Delete Route"><i class="fa-solid fa-trash"></i></a>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td class="fw-bold">Dhanmondi 15 <i class="fa-solid fa-arrow-right route-arrow"></i> Shahbag <i class="fa-solid fa-arrow-right route-arrow"></i> Tejgaon <i class="fa-solid fa-arrow-right route-arrow"></i> AIUB</td>
+                <td>Dhanmondi</td>
+                <td>AIUB</td>
+                <td>3 Stops</td>
+                <td class="text-right">
+                  <div class="icon-actions">
+                    <a href="#modal-edit" class="btn-icon btn-icon-edit" title="Edit Route"><i class="fa-regular fa-pen-to-square"></i></a>
+                    <a href="#modal-view" class="btn-icon btn-icon-view" title="View Route"><i class="fa-regular fa-eye"></i></a>
+                    <a href="#modal-delete" class="btn-icon btn-icon-delete" title="Delete Route"><i class="fa-solid fa-trash"></i></a>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td class="fw-bold">Dhanmondi 27 <i class="fa-solid fa-arrow-right route-arrow"></i> Farmgate <i class="fa-solid fa-arrow-right route-arrow"></i> Kakoli <i class="fa-solid fa-arrow-right route-arrow"></i> AIUB</td>
+                <td>Dhanmondi</td>
+                <td>AIUB</td>
+                <td>3 Stops</td>
+                <td class="text-right">
+                  <div class="icon-actions">
+                    <a href="#modal-edit" class="btn-icon btn-icon-edit" title="Edit Route"><i class="fa-regular fa-pen-to-square"></i></a>
+                    <a href="#modal-view" class="btn-icon btn-icon-view" title="View Route"><i class="fa-regular fa-eye"></i></a>
+                    <a href="#modal-delete" class="btn-icon btn-icon-delete" title="Delete Route"><i class="fa-solid fa-trash"></i></a>
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+
+        <!-- ==================== 1. ADD MODAL ==================== -->
+        <div id="modal-add" class="modal-overlay" role="dialog" aria-labelledby="modal-add-title">
+          <div class="modal-box">
+            <div class="modal-header">
+              <h3 id="modal-add-title"><i class="fa-solid fa-route"></i> Add New Route</h3>
+              <a href="#" class="modal-close" aria-label="Close">&times;</a>
+            </div>
+            <form action="#" class="modal-form">
+              <div class="form-group">
+                <label for="add-route-name">Route Path Name</label>
+                <input type="text" id="add-route-name" placeholder="e.g., Uttara House Building → Airport → Kuril → AIUB" required />
+              </div>
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="add-start">Start Point</label>
+                  <input type="text" id="add-start" placeholder="e.g., Uttara" required />
+                </div>
+                <div class="form-group">
+                  <label for="add-end">End Point</label>
+                  <input type="text" id="add-end" value="AIUB" required />
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="add-stops">Pickup Stops (Comma Separated)</label>
+                <input type="text" id="add-stops" placeholder="e.g., House Building, Jasimuddin, Airport, Kuril" />
+              </div>
+              <div class="modal-footer">
+                <a href="#" class="btn-modal-cancel">Cancel</a>
+                <a href="#" class="btn-modal-submit">Save Route</a>
+              </div>
+            </form>
+          </div>
+        </div>
+
+        <!-- ==================== 2. EDIT MODAL ==================== -->
+        <div id="modal-edit" class="modal-overlay" role="dialog" aria-labelledby="modal-edit-title">
+          <div class="modal-box">
+            <div class="modal-header">
+              <h3 id="modal-edit-title"><i class="fa-regular fa-pen-to-square"></i> Edit Route</h3>
+              <a href="#" class="modal-close" aria-label="Close">&times;</a>
+            </div>
+            <form action="#" class="modal-form">
+              <div class="form-group">
+                <label for="edit-route-name">Route Path Name</label>
+                <input type="text" id="edit-route-name" value="Shibbari → Board Bazar → Tongi → Kuril → AIUB" required />
+              </div>
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="edit-start">Start Point</label>
+                  <input type="text" id="edit-start" value="Gazipur" required />
+                </div>
+                <div class="form-group">
+                  <label for="edit-end">End Point</label>
+                  <input type="text" id="edit-end" value="AIUB" required />
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="edit-stops">Pickup Stops</label>
+                <input type="text" id="edit-stops" value="Shibbari, Board Bazar, Tongi, Kuril" />
+              </div>
+              <div class="modal-footer">
+                <a href="#" class="btn-modal-cancel">Cancel</a>
+                <a href="#" class="btn-modal-submit">Update Route</a>
+              </div>
+            </form>
+          </div>
+        </div>
+
+        <!-- ==================== 3. VIEW MODAL ==================== -->
+        <div id="modal-view" class="modal-overlay" role="dialog" aria-labelledby="modal-view-title">
+          <div class="modal-box">
+            <div class="modal-header">
+              <h3 id="modal-view-title"><i class="fa-regular fa-eye"></i> Route &amp; Pickup Details</h3>
+              <a href="#" class="modal-close" aria-label="Close">&times;</a>
+            </div>
+            <div class="detail-list">
+              <div class="detail-item">
+                <span class="detail-label">Route Name</span>
+                <span class="detail-value">Shibbari → Board Bazar → Tongi → Kuril → AIUB</span>
+              </div>
+              <div class="detail-item">
+                <span class="detail-label">Start Point</span>
+                <span class="detail-value">Gazipur (Shibbari Intersection)</span>
+              </div>
+              <div class="detail-item">
+                <span class="detail-label">End Point</span>
+                <span class="detail-value">AIUB Permanent Campus</span>
+              </div>
+              <div class="detail-item">
+                <span class="detail-label">Total Pickup Points</span>
+                <span class="detail-value">4 Designated Stops</span>
+              </div>
+              <div class="detail-item">
+                <span class="detail-label">Assigned Bus</span>
+                <span class="detail-value">Gazipur-01 (06:00 AM)</span>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <a href="#" class="btn-modal-cancel">Close</a>
+              <a href="#modal-edit" class="btn-modal-submit">Edit Route</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- ==================== 4. DELETE MODAL ==================== -->
+        <div id="modal-delete" class="modal-overlay" role="dialog" aria-labelledby="modal-delete-title">
+          <div class="modal-box modal-box-sm">
+            <div class="modal-header modal-header-danger">
+              <h3 id="modal-delete-title"><i class="fa-solid fa-trash"></i> Delete Route</h3>
+              <a href="#" class="modal-close" aria-label="Close">&times;</a>
+            </div>
+            <div class="modal-body-text">
+              <p>Are you sure you want to delete route <strong>Shibbari → Board Bazar → Tongi → Kuril → AIUB</strong>?</p>
+              <p class="text-danger-note">Linked pickup points and schedules on this route will be affected.</p>
+            </div>
+            <div class="modal-footer">
+              <a href="#" class="btn-modal-cancel">Cancel</a>
+              <a href="#" class="btn-modal-danger">Confirm Delete</a>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+  </body>
+</html>
