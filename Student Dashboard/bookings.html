@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Booking History - AIUB BMS</title>
+  <link rel="stylesheet" href="bookings.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+<body>
+  <div class="bms-layout">
+    <!-- Left Sidebar -->
+    <aside class="sidebar">
+      <div>
+        <div class="sidebar-brand">
+          <div class="brand-logo">
+            <i class="fa-solid fa-bus"></i>
+          </div>
+          <div class="brand-text">
+            <h1>AIUB BMS</h1>
+            <span>STUDENT PANEL</span>
+          </div>
+        </div>
+
+        <nav class="sidebar-nav" aria-label="Student Dashboard Navigation">
+          <a href="index.html" class="nav-item active">
+            <i class="fa-solid fa-house"></i>
+            <span>Home</span>
+          </a>
+        </nav>
+      </div>
+
+      <div class="sidebar-footer">
+        <div class="user-profile">
+          <div class="user-avatar">
+            <i class="fa-solid fa-user"></i>
+          </div>
+          <div class="user-info">
+            <p class="user-email">aritratesting2@gmail.com</p>
+            <span class="user-role">Student</span>
+          </div>
+        </div>
+        <button type="button" class="btn-logout">
+          <i class="fa-solid fa-right-from-bracket"></i>
+          <span>Log Out</span>
+        </button>
+      </div>
+    </aside>
+
+    <!-- Main Content Area -->
+    <main class="main-content">
+      <div class="bookings-wrapper">
+        <h2 class="bookings-title">My Booking History</h2>
+
+        <div class="table-container">
+          <table class="booking-table">
+            <thead>
+              <tr>
+                <th>Booking Date</th>
+                <th>Route Info</th>
+                <th>Bus &amp; Time</th>
+                <th>Seat Number</th>
+                <th>Status</th>
+                <th>Actions</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td colspan="6" class="empty-message">
+                  You have not booked any seats yet!
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="booking-actions">
+          <a href="schedules.html" class="btn-primary-outline">Book Another Seat</a>
+          <a href="index.html" class="btn-secondary-solid">Back to Dashboard</a>
+        </div>
+      </div>
+    </main>
+  </div>
+</body>
+</html>

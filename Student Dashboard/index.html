@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AIUB Bus Management System - Student Panel</title>
+  <meta name="description" content="University self-operated campus bus management portal for AIUB students with pass purchase, seat reservation, live bus tracking, notifications, feedback, and SOS emergency alerts." />
+  <meta property="og:title" content="AIUB Bus Management System - Student Panel" />
+  <meta property="og:description" content="University self-operated campus bus management portal for AIUB students with pass purchase, seat reservation, live bus tracking, notifications, feedback, and SOS emergency alerts." />
+  <meta property="og:type" content="website" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+<body>
+  <div class="bms-layout">
+    <!-- Left Sidebar -->
+    <aside class="sidebar">
+      <div>
+        <div class="sidebar-brand">
+          <div class="brand-logo">
+            <i class="fa-solid fa-bus"></i>
+          </div>
+          <div class="brand-text">
+            <h1>AIUB BMS</h1>
+            <span>STUDENT PANEL</span>
+          </div>
+        </div>
+
+        <nav class="sidebar-nav" aria-label="Student Dashboard Navigation">
+          <a href="#dashboard" class="nav-item active">
+            <i class="fa-solid fa-house"></i>
+            <span>Home</span>
+          </a>
+        </nav>
+      </div>
+
+      <!-- Bottom Student Profile & Log Out -->
+      <div class="sidebar-footer">
+        <div class="user-profile">
+          <div class="user-avatar">
+            <i class="fa-solid fa-user"></i>
+          </div>
+          <div class="user-info">
+            <p class="user-email">aritratesting2@gmail.com</p>
+            <span class="user-role">Student</span>
+          </div>
+        </div>
+        <button type="button" class="btn-logout">
+          <i class="fa-solid fa-right-from-bracket"></i>
+          <span>Log Out</span>
+        </button>
+      </div>
+    </aside>
+
+    <!-- Main Dashboard Content Area -->
+    <main class="main-content" id="dashboard">
+      <header class="page-header">
+        <h2>DASHBOARD</h2>
+        <div class="header-underline"></div>
+      </header>
+
+      <!-- Core 2x2 Feature Grid (Matching Screenshots) -->
+      <section class="dashboard-grid" aria-label="Core Student Transport Actions">
+        <!-- Card 1: My Pass -->
+        <article class="feature-card" id="my-pass">
+          <div class="icon-circle">
+            <i class="fa-solid fa-id-card"></i>
+          </div>
+          <h3>My Pass</h3>
+          <p>View your digital bus pass, validity dates, and payment status.</p>
+          <a href="my-pass.html" class="btn-outline">View Pass</a>
+        </article>
+
+        <!-- Card 2: Bus Schedules -->
+        <article class="feature-card" id="schedules">
+          <div class="icon-circle">
+            <i class="fa-solid fa-calendar-days"></i>
+          </div>
+          <h3>Bus Schedules</h3>
+          <p>Check available bus timetables, routes, and book your daily trip.</p>
+          <a href="schedules.html" class="btn-outline">View Schedules</a>
+        </article>
+
+        <!-- Card 3: Buy Pass -->
+        <article class="feature-card" id="buy-pass">
+          <div class="icon-circle">
+            <i class="fa-solid fa-ticket"></i>
+          </div>
+          <h3>Buy Pass</h3>
+          <p>Purchase daily, monthly, or semester bus passes for your commute.</p>
+          <a href="buy-pass.html" class="btn-outline">Buy Pass Now</a>
+        </article>
+
+        <!-- Card 4: My Bookings -->
+        <article class="feature-card" id="bookings">
+          <div class="icon-circle">
+            <i class="fa-solid fa-book-bookmark"></i>
+          </div>
+          <h3>My Bookings</h3>
+          <p>Manage your booked trips, check status, or cancel reservations.</p>
+          <a href="bookings.html" class="btn-outline">View Bookings</a>
+        </article>
+      </section>
+
+      <section class="dashboard-grid" aria-label="Additional Proposal Student Modules">
+        <!-- Card 5: Live Bus Tracking -->
+        <article class="feature-card" id="live-tracking">
+          <div class="icon-circle">
+            <i class="fa-solid fa-location-dot"></i>
+          </div>
+          <h3>Live Bus Tracking</h3>
+          <p>Track current bus location, estimated arrival time, and assigned route.</p>
+          <a href="live-tracking.html" class="btn-outline">Track Bus Live</a>
+        </article>
+
+        <!-- Card 6: Notifications -->
+        <article class="feature-card" id="notifications">
+          <div class="icon-circle">
+            <i class="fa-solid fa-bell"></i>
+          </div>
+          <h3>Notifications &amp; History</h3>
+          <p>Receive bus arrival and departure updates and keep a travel history.</p>
+          <a href="notifications.html" class="btn-outline">View Notifications</a>
+        </article>
+
+        <!-- Card 7: Feedback, Complaints & SOS -->
+        <article class="feature-card" id="feedback-sos">
+          <div class="icon-circle">
+            <i class="fa-solid fa-triangle-exclamation"></i>
+          </div>
+          <h3>Feedback &amp; SOS Alert</h3>
+          <p>Submit transport complaints, share experiences, or trigger an emergency SOS alert.</p>
+          <a href="feedback-sos.html" class="btn-outline">Open Feedback &amp; SOS</a>
+        </article>
+
+        <!-- Card 8: Profile & Pickup Point Management -->
+        <article class="feature-card" id="profile">
+          <div class="icon-circle">
+            <i class="fa-solid fa-user-check"></i>
+          </div>
+          <h3>Profile &amp; Pickup Point</h3>
+          <p>Update personal university info, guardian contact, and default pickup stop.</p>
+          <a href="profile.html" class="btn-outline">Manage Profile</a>
+        </article>
+      </section>
+    </main>
+  </div>
+</body>
+</html>

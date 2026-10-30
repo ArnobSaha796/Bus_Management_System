@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Live Bus Tracking - AIUB BMS</title>
+  <link rel="stylesheet" href="live-tracking.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+<body>
+  <div class="bms-layout">
+    <!-- Left Sidebar -->
+    <aside class="sidebar">
+      <div>
+        <div class="sidebar-brand">
+          <div class="brand-logo">
+            <i class="fa-solid fa-bus"></i>
+          </div>
+          <div class="brand-text">
+            <h1>AIUB BMS</h1>
+            <span>STUDENT PANEL</span>
+          </div>
+        </div>
+
+        <nav class="sidebar-nav" aria-label="Student Dashboard Navigation">
+          <a href="index.html" class="nav-item active">
+            <i class="fa-solid fa-house"></i>
+            <span>Home</span>
+          </a>
+        </nav>
+      </div>
+
+      <div class="sidebar-footer">
+        <div class="user-profile">
+          <div class="user-avatar">
+            <i class="fa-solid fa-user"></i>
+          </div>
+          <div class="user-info">
+            <p class="user-email">aritratesting2@gmail.com</p>
+            <span class="user-role">Student</span>
+          </div>
+        </div>
+        <button type="button" class="btn-logout">
+          <i class="fa-solid fa-right-from-bracket"></i>
+          <span>Log Out</span>
+        </button>
+      </div>
+    </aside>
+
+    <!-- Main Content Area -->
+    <main class="main-content">
+      <div class="tracking-wrapper">
+        <h2 class="tracking-title">LIVE BUS TRACKING</h2>
+
+        <section class="tracking-card">
+          <div class="tracking-header">
+            <div class="bus-summary">
+              <h3>Gazipur-01 (Shibbari &rarr; Board Bazar &rarr; Tongi &rarr; Kuril &rarr; AIUB)</h3>
+              <p>Driver: Md. Rafiqul Islam &bull; Contact: +880 1711-901122 &bull; Assigned Pickup: Kuril</p>
+            </div>
+            <div class="eta-box">
+              <span>Estimated Arrival</span>
+              <strong>18 mins</strong>
+            </div>
+          </div>
+
+          <div class="route-progress">
+            <div class="stop-card completed">
+              <span class="stop-status">Departed</span>
+              <strong>01. Shibbari</strong>
+            </div>
+            <div class="stop-card completed">
+              <span class="stop-status">Departed</span>
+              <strong>02. Board Bazar</strong>
+            </div>
+            <div class="stop-card active">
+              <span class="stop-status">Current Location</span>
+              <strong>03. Tongi</strong>
+            </div>
+            <div class="stop-card">
+              <span class="stop-status">Upcoming</span>
+              <strong>04. Kuril</strong>
+            </div>
+            <div class="stop-card">
+              <span class="stop-status">Destination</span>
+              <strong>05. AIUB Campus</strong>
+            </div>
+          </div>
+        </section>
+
+        <div class="back-actions">
+          <a href="index.html" class="btn-secondary">Back to Dashboard</a>
+        </div>
+      </div>
+    </main>
+  </div>
+</body>
+</html>

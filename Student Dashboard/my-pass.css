@@ -1,0 +1,265 @@
+/* my-pass.css - Card 1: My Bus Pass / Receipt */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background-color: #f4f6f8;
+  color: #1e293b;
+}
+
+.bms-layout {
+  display: flex;
+  min-height: 100vh;
+}
+
+/* Sidebar */
+.sidebar {
+  width: 240px;
+  background-color: #003366;
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  z-index: 100;
+  border-right: 1px solid #002855;
+}
+
+.sidebar-brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 20px 16px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.brand-logo {
+  width: 40px;
+  height: 40px;
+  background-color: #ffb703;
+  color: #002855;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  flex-shrink: 0;
+}
+
+.brand-text h1 {
+  font-size: 18px;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+  line-height: 1.2;
+}
+
+.brand-text span {
+  font-size: 10px;
+  color: #cbd5e1;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.sidebar-nav {
+  padding: 16px 12px;
+}
+
+.nav-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 14px;
+  border-radius: 8px;
+  text-decoration: none;
+  color: #e2e8f0;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.nav-item.active {
+  background-color: #1e4b7a;
+  color: #ffb703;
+  font-weight: 600;
+}
+
+.sidebar-footer {
+  background-color: #00264d;
+  padding: 16px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.user-profile {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 14px;
+}
+
+.user-avatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background-color: #64748b;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  flex-shrink: 0;
+}
+
+.user-info {
+  overflow: hidden;
+}
+
+.user-email {
+  font-size: 12px;
+  font-weight: 700;
+  color: #ffffff;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.user-role {
+  font-size: 11px;
+  color: #ffb703;
+}
+
+.btn-logout {
+  width: 100%;
+  background-color: #dc3545;
+  color: #ffffff;
+  border: none;
+  border-radius: 6px;
+  padding: 9px 12px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+/* Main Content */
+.main-content {
+  margin-left: 240px;
+  flex: 1;
+  padding: 40px 48px;
+}
+
+.receipt-container {
+  max-width: 520px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.page-title {
+  color: #0d6efd;
+  font-size: 28px;
+  font-weight: 600;
+  margin-bottom: 28px;
+}
+
+.pass-card {
+  background-color: #ffffff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.08);
+  border: 1px solid #e2e8f0;
+}
+
+.pass-card-header {
+  background-color: #198754;
+  color: #ffffff;
+  padding: 16px;
+  font-size: 18px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.check-badge {
+  background-color: #4ade80;
+  color: #064e3b;
+  width: 24px;
+  height: 24px;
+  border-radius: 4px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+}
+
+.pass-card-body {
+  padding: 32px 36px;
+}
+
+.ticket-icon {
+  font-size: 46px;
+  color: #ec4899;
+  margin-bottom: 12px;
+}
+
+.pass-type {
+  color: #0d6efd;
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 28px;
+}
+
+.pass-details {
+  text-align: left;
+}
+
+.detail-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0;
+  font-size: 15px;
+}
+
+.detail-label {
+  color: #64748b;
+}
+
+.detail-value {
+  font-weight: 700;
+  color: #0f172a;
+}
+
+.detail-value.expiry {
+  color: #dc3545;
+}
+
+.status-row {
+  border-top: 1px solid #e2e8f0;
+  margin-top: 6px;
+  padding-top: 14px;
+}
+
+.status-badge {
+  background-color: #198754;
+  color: #ffffff;
+  font-size: 12px;
+  font-weight: 700;
+  padding: 4px 12px;
+  border-radius: 4px;
+}
+
+.pass-card-footer {
+  background-color: #f8fafc;
+  border-top: 1px solid #e2e8f0;
+  padding: 14px 20px;
+  font-size: 12.5px;
+  color: #64748b;
+}

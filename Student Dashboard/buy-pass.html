@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Choose Your Bus Pass - AIUB BMS</title>
+  <link rel="stylesheet" href="buy-pass.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+<body>
+  <div class="bms-layout">
+    <!-- Left Sidebar -->
+    <aside class="sidebar">
+      <div>
+        <div class="sidebar-brand">
+          <div class="brand-logo">
+            <i class="fa-solid fa-bus"></i>
+          </div>
+          <div class="brand-text">
+            <h1>AIUB BMS</h1>
+            <span>STUDENT PANEL</span>
+          </div>
+        </div>
+
+        <nav class="sidebar-nav" aria-label="Student Dashboard Navigation">
+          <a href="index.html" class="nav-item active">
+            <i class="fa-solid fa-house"></i>
+            <span>Home</span>
+          </a>
+        </nav>
+      </div>
+
+      <div class="sidebar-footer">
+        <div class="user-profile">
+          <div class="user-avatar">
+            <i class="fa-solid fa-user"></i>
+          </div>
+          <div class="user-info">
+            <p class="user-email">aritratesting2@gmail.com</p>
+            <span class="user-role">Student</span>
+          </div>
+        </div>
+        <button type="button" class="btn-logout">
+          <i class="fa-solid fa-right-from-bracket"></i>
+          <span>Log Out</span>
+        </button>
+      </div>
+    </aside>
+
+    <!-- Main Content Area -->
+    <main class="main-content">
+      <div class="pricing-wrapper">
+        <h2 class="pricing-title">Choose Your Bus Pass</h2>
+        <p class="pricing-subtitle">Select a plan</p>
+
+        <section class="pricing-grid">
+          <!-- Daily Pass -->
+          <article class="plan-card border-cyan">
+            <div class="plan-header bg-cyan">Daily Pass</div>
+            <div class="plan-body">
+              <div class="plan-price">৳<strong>50</strong><span>/day</span></div>
+              <p class="plan-validity">Valid for one day</p>
+              <label class="date-label" for="date-daily">Select Date:</label>
+              <input id="date-daily" type="date" class="date-input" />
+              <a href="my-pass.html" class="btn-buy bg-cyan">Buy Now</a>
+            </div>
+          </article>
+
+          <!-- Monthly Pass -->
+          <article class="plan-card border-green">
+            <div class="plan-header bg-green">Monthly Pass</div>
+            <div class="plan-body">
+              <div class="plan-price">৳<strong>1200</strong><span>/mo</span></div>
+              <p class="plan-validity">Valid for One Month</p>
+              <label class="date-label" for="date-monthly">Select Date:</label>
+              <input id="date-monthly" type="date" class="date-input" />
+              <a href="my-pass.html" class="btn-buy bg-green">Buy Now</a>
+            </div>
+          </article>
+
+          <!-- Semester Pass -->
+          <article class="plan-card border-blue">
+            <div class="plan-header bg-blue">Semester Pass</div>
+            <div class="plan-body">
+              <div class="plan-price">৳<strong>4000</strong><span>/sem</span></div>
+              <p class="plan-validity">Valid for This Semester</p>
+              <label class="date-label" for="date-semester">Select Date:</label>
+              <input id="date-semester" type="date" class="date-input" />
+              <a href="my-pass.html" class="btn-buy bg-blue">Buy Now</a>
+            </div>
+          </article>
+        </section>
+      </div>
+    </main>
+  </div>
+</body>
+</html>

@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bus Schedules - AIUB BMS</title>
+  <link rel="stylesheet" href="schedules.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+<body>
+  <div class="bms-layout">
+    <!-- Left Sidebar -->
+    <aside class="sidebar">
+      <div>
+        <div class="sidebar-brand">
+          <div class="brand-logo">
+            <i class="fa-solid fa-bus"></i>
+          </div>
+          <div class="brand-text">
+            <h1>AIUB BMS</h1>
+            <span>STUDENT PANEL</span>
+          </div>
+        </div>
+
+        <nav class="sidebar-nav" aria-label="Student Dashboard Navigation">
+          <a href="index.html" class="nav-item active">
+            <i class="fa-solid fa-house"></i>
+            <span>Home</span>
+          </a>
+        </nav>
+      </div>
+
+      <div class="sidebar-footer">
+        <div class="user-profile">
+          <div class="user-avatar">
+            <i class="fa-solid fa-user"></i>
+          </div>
+          <div class="user-info">
+            <p class="user-email">aritratesting2@gmail.com</p>
+            <span class="user-role">Student</span>
+          </div>
+        </div>
+        <button type="button" class="btn-logout">
+          <i class="fa-solid fa-right-from-bracket"></i>
+          <span>Log Out</span>
+        </button>
+      </div>
+    </aside>
+
+    <!-- Main Content Area -->
+    <main class="main-content">
+      <div class="schedules-container">
+        <h2 class="schedules-heading">BUS SCHEDULES</h2>
+
+        <div class="schedule-table-card">
+          <table class="schedule-table">
+            <thead>
+              <tr>
+                <th>Route Info</th>
+                <th>Bus Info</th>
+                <th class="text-right">Actions</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  <div class="route-path">Shibbari &rarr; Board Bazar &rarr; Tongi &rarr; Kuril &rarr; AIUB</div>
+                  <div class="route-time"><i class="fa-regular fa-clock"></i> Sunday - Thursday at 06:00</div>
+                </td>
+                <td><span class="bus-code">Gazipur-01</span></td>
+                <td class="text-right">
+                  <a href="bookings.html" class="btn-book"><i class="fa-solid fa-check"></i> Book Trip</a>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="route-path">Shibbari &rarr; Bypass &rarr; Purbachal 300 Feet &rarr; AIUB</div>
+                  <div class="route-time"><i class="fa-regular fa-clock"></i> Sunday - Thursday at 09:00</div>
+                </td>
+                <td><span class="bus-code">Gazipur-02</span></td>
+                <td class="text-right">
+                  <a href="bookings.html" class="btn-book"><i class="fa-solid fa-check"></i> Book Trip</a>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="route-path">Jatrabari &rarr; Sayedabad &rarr; Rampura &rarr; Badda &rarr; AIUB</div>
+                  <div class="route-time"><i class="fa-regular fa-clock"></i> Sunday - Thursday at 06:00</div>
+                </td>
+                <td><span class="bus-code">Jatrabari-01</span></td>
+                <td class="text-right">
+                  <a href="bookings.html" class="btn-book"><i class="fa-solid fa-check"></i> Book Trip</a>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="route-path">Jatrabari &rarr; Hanif Flyover &rarr; Hatirjheel &rarr; AIUB</div>
+                  <div class="route-time"><i class="fa-regular fa-clock"></i> Sunday - Thursday at 09:00</div>
+                </td>
+                <td><span class="bus-code">Jatrabari-02</span></td>
+                <td class="text-right">
+                  <a href="bookings.html" class="btn-book"><i class="fa-solid fa-check"></i> Book Trip</a>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="route-path">Mirpur 12 &rarr; Agargaon &rarr; Mohakhali &rarr; Banani &rarr; AIUB</div>
+                  <div class="route-time"><i class="fa-regular fa-clock"></i> Sunday - Thursday at 06:00</div>
+                </td>
+                <td><span class="bus-code">Mirpur-01</span></td>
+                <td class="text-right">
+                  <a href="bookings.html" class="btn-book"><i class="fa-solid fa-check"></i> Book Trip</a>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="route-path">Mirpur 1 &rarr; Cantonment &rarr; Kalshi &rarr; Kuril &rarr; AIUB</div>
+                  <div class="route-time"><i class="fa-regular fa-clock"></i> Sunday - Thursday at 09:00</div>
+                </td>
+                <td><span class="bus-code">Mirpur-02</span></td>
+                <td class="text-right">
+                  <a href="bookings.html" class="btn-book"><i class="fa-solid fa-check"></i> Book Trip</a>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="route-path">Dhanmondi 15 &rarr; Shahbag &rarr; Tejgaon &rarr; AIUB</div>
+                  <div class="route-time"><i class="fa-regular fa-clock"></i> Sunday - Thursday at 06:00</div>
+                </td>
+                <td><span class="bus-code">Dhanmondi-01</span></td>
+                <td class="text-right">
+                  <a href="bookings.html" class="btn-book"><i class="fa-solid fa-check"></i> Book Trip</a>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </main>
+  </div>
+</body>
+</html>

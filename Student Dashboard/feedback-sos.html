@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Feedback &amp; SOS Alert - AIUB BMS</title>
+  <link rel="stylesheet" href="feedback-sos.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+<body>
+  <div class="bms-layout">
+    <!-- Left Sidebar -->
+    <aside class="sidebar">
+      <div>
+        <div class="sidebar-brand">
+          <div class="brand-logo">
+            <i class="fa-solid fa-bus"></i>
+          </div>
+          <div class="brand-text">
+            <h1>AIUB BMS</h1>
+            <span>STUDENT PANEL</span>
+          </div>
+        </div>
+
+        <nav class="sidebar-nav" aria-label="Student Dashboard Navigation">
+          <a href="index.html" class="nav-item active">
+            <i class="fa-solid fa-house"></i>
+            <span>Home</span>
+          </a>
+        </nav>
+      </div>
+
+      <div class="sidebar-footer">
+        <div class="user-profile">
+          <div class="user-avatar">
+            <i class="fa-solid fa-user"></i>
+          </div>
+          <div class="user-info">
+            <p class="user-email">aritratesting2@gmail.com</p>
+            <span class="user-role">Student</span>
+          </div>
+        </div>
+        <button type="button" class="btn-logout">
+          <i class="fa-solid fa-right-from-bracket"></i>
+          <span>Log Out</span>
+        </button>
+      </div>
+    </aside>
+
+    <!-- Main Content Area -->
+    <main class="main-content">
+      <div class="support-container">
+        <h2 class="support-heading">FEEDBACK, COMPLAINTS &amp; SOS EMERGENCY</h2>
+
+        <div class="support-grid">
+          <!-- SOS Emergency Panel -->
+          <section class="sos-card">
+            <div>
+              <div class="sos-icon">
+                <i class="fa-solid fa-triangle-exclamation"></i>
+              </div>
+              <h3>SOS / Emergency Alert</h3>
+              <p>In case of an on-route emergency, medical issue, or bus breakdown, trigger an instant SOS to notify AIUB Transport Control and your guardian.</p>
+
+              <div class="form-group">
+                <label for="sos-bus">Current Bus</label>
+                <select id="sos-bus">
+                  <option>Gazipur-01</option>
+                  <option>Gazipur-02</option>
+                  <option>Jatrabari-01</option>
+                  <option>Mirpur-01</option>
+                  <option>Dhanmondi-01</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="sos-location">Current Location / Landmark</label>
+                <input id="sos-location" type="text" value="Near Kuril Flyover" />
+              </div>
+            </div>
+
+            <button type="button" class="btn-sos">
+              <i class="fa-solid fa-phone-volume"></i>
+              <span>Trigger Emergency SOS</span>
+            </button>
+          </section>
+
+          <!-- Feedback & Complaint Form -->
+          <section class="feedback-card">
+            <h3>Submit Transport Feedback or Complaint</h3>
+            <p>Share your commute experience or report schedule delays and bus issues directly to the Administrator.</p>
+
+            <form action="index.html">
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="report-type">Report Type</label>
+                  <select id="report-type">
+                    <option>General Feedback</option>
+                    <option>Service Complaint</option>
+                    <option>Route Delay</option>
+                    <option>Driver Conduct</option>
+                  </select>
+                </div>
+
+                <div class="form-group">
+                  <label for="bus-route">Bus Route</label>
+                  <select id="bus-route">
+                    <option>Gazipur-01</option>
+                    <option>Gazipur-02</option>
+                    <option>Jatrabari-01</option>
+                    <option>Mirpur-01</option>
+                    <option>Dhanmondi-01</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="subject">Subject</label>
+                <input id="subject" type="text" placeholder="Brief summary of the issue or feedback" />
+              </div>
+
+              <div class="form-group">
+                <label for="description">Detailed Description</label>
+                <textarea id="description" rows="4" placeholder="Describe your experience or transport issue..."></textarea>
+              </div>
+
+              <div class="form-actions">
+                <button type="submit" class="btn-submit">Submit Report</button>
+                <a href="index.html" class="btn-secondary">Back to Dashboard</a>
+              </div>
+            </form>
+          </section>
+        </div>
+      </div>
+    </main>
+  </div>
+</body>
+</html>
