@@ -1,0 +1,410 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pending Pass Requests - AIUB BMS Admin Panel</title>
+    <!-- Font Awesome 6 for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <!-- External Section Stylesheet -->
+    <link rel="stylesheet" href="pending-passes.css" />
+  </head>
+  <body>
+    <div class="admin-layout">
+      <!-- ==================== LEFT SIDEBAR ==================== -->
+      <aside class="sidebar">
+        <div class="sidebar-brand">
+          <div class="brand-logo-box">
+            <i class="fa-solid fa-bus"></i>
+          </div>
+          <div class="brand-text">
+            <h1 class="brand-title">AIUB BMS</h1>
+            <span class="brand-subtitle">ADMIN PANEL</span>
+          </div>
+        </div>
+
+        <nav class="sidebar-nav" aria-label="Admin Navigation">
+          <a href="index.html" class="nav-item">
+            <i class="fa-solid fa-house"></i>
+            <span>Home</span>
+          </a>
+        </nav>
+
+        <div class="sidebar-footer">
+          <div class="admin-profile">
+            <div class="admin-avatar">
+              <i class="fa-solid fa-user"></i>
+            </div>
+            <div class="admin-info">
+              <p class="admin-email">amiadmin@gmail.com</p>
+              <span class="admin-role">Administrator</span>
+            </div>
+          </div>
+          <button type="button" class="btn-logout">
+            <i class="fa-solid fa-right-from-bracket"></i>
+            <span>Log Out</span>
+          </button>
+        </div>
+      </aside>
+
+      <!-- ==================== MAIN CONTENT AREA ==================== -->
+      <main class="main-content">
+        <header class="page-header-row">
+          <div>
+            <h2 class="page-heading">PENDING PASS REQUESTS</h2>
+            <div class="heading-underline"></div>
+          </div>
+
+          <div class="header-controls">
+            <div class="filter-tabs" role="tablist" aria-label="Pass Status Filter">
+              <button type="button" class="filter-tab active">All Requests (4)</button>
+              <button type="button" class="filter-tab">Pending (3)</button>
+              <button type="button" class="filter-tab">Approved (1)</button>
+            </div>
+            <a href="#modal-add" class="btn-primary-add">
+              <i class="fa-solid fa-plus"></i>
+              <span>Add Pass Request</span>
+            </a>
+          </div>
+        </header>
+
+        <!-- Pass Requests Table Card -->
+        <section class="table-card" aria-label="Pending Pass Requests Table">
+          <table class="pass-table">
+            <thead>
+              <tr>
+                <th>Student Email</th>
+                <th>Pass Type</th>
+                <th>Price</th>
+                <th>Status</th>
+                <th class="text-right">Actions</th>
+              </tr>
+            </thead>
+            <tbody>
+              <!-- Row 1 -->
+              <tr>
+                <td>
+                  <div class="student-cell">
+                    <span class="student-email">23-54334-3@student.aiub.edu</span>
+                    <span class="student-meta">Md. Tahmidur Rahman Khan · Mirpur-01</span>
+                  </div>
+                </td>
+                <td>
+                  <div class="pass-type-cell">
+                    <span class="pass-name">Monthly Pass (Two-Way)</span>
+                    <span class="pass-validity">Nov 2026 · bKash (BKX9948210)</span>
+                  </div>
+                </td>
+                <td class="price-cell">2,200 BDT</td>
+                <td>
+                  <div class="status-cell">
+                    <span class="status-badge status-pending">Pending</span>
+                    <span class="payment-verified">
+                      <i class="fa-solid fa-circle-check"></i> Payment Verified
+                    </span>
+                  </div>
+                </td>
+                <td class="text-right">
+                  <div class="action-buttons">
+                    <a href="#modal-edit" class="btn-action btn-approve" title="Approve or Edit Pass">
+                      <i class="fa-solid fa-check"></i> Approve
+                    </a>
+                    <a href="#modal-edit" class="btn-icon btn-icon-edit" title="Edit Request">
+                      <i class="fa-regular fa-pen-to-square"></i>
+                    </a>
+                    <a href="#modal-view" class="btn-icon btn-icon-view" title="View Request Details">
+                      <i class="fa-regular fa-eye"></i>
+                    </a>
+                    <a href="#modal-delete" class="btn-icon btn-icon-delete" title="Decline / Delete Request">
+                      <i class="fa-solid fa-trash"></i>
+                    </a>
+                  </div>
+                </td>
+              </tr>
+
+              <!-- Row 2 -->
+              <tr>
+                <td>
+                  <div class="student-cell">
+                    <span class="student-email">23-54613-3@student.aiub.edu</span>
+                    <span class="student-meta">Arnob Saha · Jatrabari-01</span>
+                  </div>
+                </td>
+                <td>
+                  <div class="pass-type-cell">
+                    <span class="pass-name">Monthly Pass (Two-Way)</span>
+                    <span class="pass-validity">Nov 2026 · Nagad (NGD7741209)</span>
+                  </div>
+                </td>
+                <td class="price-cell">2,200 BDT</td>
+                <td>
+                  <div class="status-cell">
+                    <span class="status-badge status-pending">Pending</span>
+                    <span class="payment-verified">
+                      <i class="fa-solid fa-circle-check"></i> Payment Verified
+                    </span>
+                  </div>
+                </td>
+                <td class="text-right">
+                  <div class="action-buttons">
+                    <a href="#modal-edit" class="btn-action btn-approve" title="Approve or Edit Pass">
+                      <i class="fa-solid fa-check"></i> Approve
+                    </a>
+                    <a href="#modal-edit" class="btn-icon btn-icon-edit" title="Edit Request">
+                      <i class="fa-regular fa-pen-to-square"></i>
+                    </a>
+                    <a href="#modal-view" class="btn-icon btn-icon-view" title="View Request Details">
+                      <i class="fa-regular fa-eye"></i>
+                    </a>
+                    <a href="#modal-delete" class="btn-icon btn-icon-delete" title="Decline / Delete Request">
+                      <i class="fa-solid fa-trash"></i>
+                    </a>
+                  </div>
+                </td>
+              </tr>
+
+              <!-- Row 3 -->
+              <tr>
+                <td>
+                  <div class="student-cell">
+                    <span class="student-email">23-55092-3@student.aiub.edu</span>
+                    <span class="student-meta">Md. Shahriar Kabir Seium · Gazipur-01</span>
+                  </div>
+                </td>
+                <td>
+                  <div class="pass-type-cell">
+                    <span class="pass-name">Monthly Pass (Two-Way)</span>
+                    <span class="pass-validity">Nov 2026 · bKash (BKX3310944)</span>
+                  </div>
+                </td>
+                <td class="price-cell">2,200 BDT</td>
+                <td>
+                  <div class="status-cell">
+                    <span class="status-badge status-pending">Pending</span>
+                    <span class="payment-unverified">
+                      <i class="fa-solid fa-clock"></i> Unverified Payment
+                    </span>
+                  </div>
+                </td>
+                <td class="text-right">
+                  <div class="action-buttons">
+                    <a href="#modal-edit" class="btn-action btn-verify" title="Verify Payment">
+                      <i class="fa-solid fa-shield-halved"></i> Verify
+                    </a>
+                    <a href="#modal-edit" class="btn-icon btn-icon-edit" title="Edit Request">
+                      <i class="fa-regular fa-pen-to-square"></i>
+                    </a>
+                    <a href="#modal-view" class="btn-icon btn-icon-view" title="View Request Details">
+                      <i class="fa-regular fa-eye"></i>
+                    </a>
+                    <a href="#modal-delete" class="btn-icon btn-icon-delete" title="Decline / Delete Request">
+                      <i class="fa-solid fa-trash"></i>
+                    </a>
+                  </div>
+                </td>
+              </tr>
+
+              <!-- Row 4 -->
+              <tr>
+                <td>
+                  <div class="student-cell">
+                    <span class="student-email">23-54310-3@student.aiub.edu</span>
+                    <span class="student-meta">Aritra Mallick Joy · Dhanmondi-02</span>
+                  </div>
+                </td>
+                <td>
+                  <div class="pass-type-cell">
+                    <span class="pass-name">Monthly Pass (Morning Only)</span>
+                    <span class="pass-validity">Nov 2026 · SSLCommerz (SSL5510921)</span>
+                  </div>
+                </td>
+                <td class="price-cell">1,400 BDT</td>
+                <td>
+                  <div class="status-cell">
+                    <span class="status-badge status-approved">Approved</span>
+                    <span class="payment-verified">
+                      <i class="fa-solid fa-circle-check"></i> Payment Verified
+                    </span>
+                  </div>
+                </td>
+                <td class="text-right">
+                  <div class="action-buttons">
+                    <a href="#modal-edit" class="btn-icon btn-icon-edit" title="Edit Pass">
+                      <i class="fa-regular fa-pen-to-square"></i>
+                    </a>
+                    <a href="#modal-view" class="btn-icon btn-icon-view" title="View Active Pass">
+                      <i class="fa-regular fa-eye"></i>
+                    </a>
+                    <a href="#modal-delete" class="btn-icon btn-icon-delete" title="Delete Pass">
+                      <i class="fa-solid fa-trash"></i>
+                    </a>
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+
+        <!-- ==================== 1. ADD MODAL ==================== -->
+        <div id="modal-add" class="modal-overlay" role="dialog" aria-labelledby="modal-add-title">
+          <div class="modal-box">
+            <div class="modal-header">
+              <h3 id="modal-add-title"><i class="fa-solid fa-plus-circle"></i> Add New Pass Request</h3>
+              <a href="#" class="modal-close" aria-label="Close">&times;</a>
+            </div>
+            <form action="#" class="modal-form">
+              <div class="form-group">
+                <label for="add-email">Student University Email</label>
+                <input type="email" id="add-email" placeholder="e.g., 23-54334-3@student.aiub.edu" required />
+              </div>
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="add-pass-type">Pass Type</label>
+                  <select id="add-pass-type">
+                    <option value="two-way">Monthly Pass (Two-Way) - 2,200 BDT</option>
+                    <option value="morning">Monthly Pass (Morning Only) - 1,400 BDT</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="add-bus">Assigned Bus</label>
+                  <select id="add-bus">
+                    <option>Mirpur-01</option>
+                    <option>Gazipur-01</option>
+                    <option>Jatrabari-01</option>
+                    <option>Dhanmondi-02</option>
+                  </select>
+                </div>
+              </div>
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="add-trx">Payment Transaction ID</label>
+                  <input type="text" id="add-trx" placeholder="e.g., bKash BKX9948210" required />
+                </div>
+                <div class="form-group">
+                  <label for="add-status">Initial Status</label>
+                  <select id="add-status">
+                    <option value="Pending">Pending</option>
+                    <option value="Approved">Approved</option>
+                  </select>
+                </div>
+              </div>
+              <div class="modal-footer">
+                <a href="#" class="btn-modal-cancel">Cancel</a>
+                <a href="#" class="btn-modal-submit">Create Pass Request</a>
+              </div>
+            </form>
+          </div>
+        </div>
+
+        <!-- ==================== 2. EDIT MODAL ==================== -->
+        <div id="modal-edit" class="modal-overlay" role="dialog" aria-labelledby="modal-edit-title">
+          <div class="modal-box">
+            <div class="modal-header">
+              <h3 id="modal-edit-title"><i class="fa-regular fa-pen-to-square"></i> Edit / Verify Pass Request</h3>
+              <a href="#" class="modal-close" aria-label="Close">&times;</a>
+            </div>
+            <form action="#" class="modal-form">
+              <div class="form-group">
+                <label for="edit-email">Student Email</label>
+                <input type="email" id="edit-email" value="23-54334-3@student.aiub.edu" required />
+              </div>
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="edit-pass-type">Pass Type</label>
+                  <select id="edit-pass-type">
+                    <option selected>Monthly Pass (Two-Way)</option>
+                    <option>Monthly Pass (Morning Only)</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="edit-price">Price (BDT)</label>
+                  <input type="text" id="edit-price" value="2,200 BDT" />
+                </div>
+              </div>
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="edit-payment">Payment Verification</label>
+                  <select id="edit-payment">
+                    <option selected>Payment Verified</option>
+                    <option>Unverified Payment</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="edit-approval">Pass Approval Status</label>
+                  <select id="edit-approval">
+                    <option>Pending</option>
+                    <option selected>Approved</option>
+                    <option>Declined</option>
+                  </select>
+                </div>
+              </div>
+              <div class="modal-footer">
+                <a href="#" class="btn-modal-cancel">Cancel</a>
+                <a href="#" class="btn-modal-submit">Save Changes</a>
+              </div>
+            </form>
+          </div>
+        </div>
+
+        <!-- ==================== 3. VIEW MODAL ==================== -->
+        <div id="modal-view" class="modal-overlay" role="dialog" aria-labelledby="modal-view-title">
+          <div class="modal-box">
+            <div class="modal-header">
+              <h3 id="modal-view-title"><i class="fa-regular fa-eye"></i> Pass Request Details</h3>
+              <a href="#" class="modal-close" aria-label="Close">&times;</a>
+            </div>
+            <div class="detail-list">
+              <div class="detail-item">
+                <span class="detail-label">Student Name</span>
+                <span class="detail-value">Md. Tahmidur Rahman Khan (23-54334-3)</span>
+              </div>
+              <div class="detail-item">
+                <span class="detail-label">Student Email</span>
+                <span class="detail-value">23-54334-3@student.aiub.edu</span>
+              </div>
+              <div class="detail-item">
+                <span class="detail-label">Assigned Bus &amp; Route</span>
+                <span class="detail-value">Mirpur-01 (Mirpur 12 → AIUB)</span>
+              </div>
+              <div class="detail-item">
+                <span class="detail-label">Pass Type &amp; Validity</span>
+                <span class="detail-value">Monthly Pass (Two-Way) · Valid Nov 2026</span>
+              </div>
+              <div class="detail-item">
+                <span class="detail-label">Payment Info</span>
+                <span class="detail-value">2,200 BDT · bKash TrxID: BKX9948210 (Verified)</span>
+              </div>
+              <div class="detail-item">
+                <span class="detail-label">Current Status</span>
+                <span class="detail-value status-pending">Pending Admin Approval</span>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <a href="#" class="btn-modal-cancel">Close</a>
+              <a href="#modal-edit" class="btn-modal-submit">Edit / Approve</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- ==================== 4. DELETE MODAL ==================== -->
+        <div id="modal-delete" class="modal-overlay" role="dialog" aria-labelledby="modal-delete-title">
+          <div class="modal-box modal-box-sm">
+            <div class="modal-header modal-header-danger">
+              <h3 id="modal-delete-title"><i class="fa-solid fa-triangle-exclamation"></i> Decline / Delete Pass Request</h3>
+              <a href="#" class="modal-close" aria-label="Close">&times;</a>
+            </div>
+            <div class="modal-body-text">
+              <p>Are you sure you want to decline and remove the bus pass request for <strong>23-54334-3@student.aiub.edu</strong>?</p>
+              <p class="text-danger-note">This action will notify the student and cannot be undone.</p>
+            </div>
+            <div class="modal-footer">
+              <a href="#" class="btn-modal-cancel">Cancel</a>
+              <a href="#" class="btn-modal-danger">Confirm Delete</a>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+  </body>
+</html>

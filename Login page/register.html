@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AIUB Bus Management System — Account Registration</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="register.css" />
+</head>
+<body>
+
+  <!-- Top Institutional Header -->
+  <header class="top-navbar">
+    <a href="login.html" class="brand-wordmark">AIUB Bus Management System</a>
+    <div class="top-nav-action">
+      <a href="login.html" class="btn-outline-sm">Back to Sign In</a>
+      <span class="sos-badge font-mono">SOS Helpline: +880 1844-115000</span>
+    </div>
+  </header>
+
+  <!-- Centered Registration Card Workspace -->
+  <main class="register-workspace">
+    <section class="register-card" aria-label="Account Registration">
+      <div class="panel-header">
+        <div class="institution-tag">American International University–Bangladesh (AIUB)</div>
+        <h1 class="panel-title" id="reg-main-title">Create Transport Account</h1>
+        <p class="panel-subtitle">
+          Select your user role below to register for the AIUB Campus Bus Management System.
+        </p>
+      </div>
+
+      <!-- Feedback Banner -->
+      <div id="reg-feedback" class="feedback-banner hidden" role="status"></div>
+
+      <!-- 3-Role Registration Selector (Student / Parent / Administrator) -->
+      <div class="role-selector" role="radiogroup" aria-label="Select Registration Role">
+        <button type="button" class="role-btn active" id="tab-student" onclick="switchRegRole('student')">
+          Student
+        </button>
+        <button type="button" class="role-btn" id="tab-parent" onclick="switchRegRole('parent')">
+          Parent / Guardian
+        </button>
+        <button type="button" class="role-btn" id="tab-admin" onclick="switchRegRole('admin')">
+          Administrator
+        </button>
+      </div>
+
+      <!-- Role Context Notice -->
+      <div class="role-notice" id="reg-role-notice">
+        <strong>Student Registration:</strong> Register with your AIUB university credentials. Your account will become active after Administrator approval so you can buy monthly bus passes, reserve seats, and track buses live.
+      </div>
+
+      <!-- =================================================================
+           1. STUDENT REGISTRATION FORM
+           ================================================================= -->
+      <form id="form-student" class="reg-form" action="#" method="post" onsubmit="handleRegSubmit(event, 'Student')">
+        <div class="section-divider-label">01. Student University Profile</div>
+
+        <div class="form-grid-2">
+          <div class="form-group">
+            <label for="stu-id" class="form-label">AIUB Student ID</label>
+            <input
+              type="text"
+              id="stu-id"
+              name="studentId"
+              class="form-input font-mono"
+              placeholder="23-54334-3"
+              required
+            />
+            <span class="field-hint">Format: XX-XXXXX-X</span>
+          </div>
+
+          <div class="form-group">
+            <label for="stu-name" class="form-label">Full Official Name</label>
+            <input
+              type="text"
+              id="stu-name"
+              name="fullName"
+              class="form-input"
+              placeholder="Md. Tahmidur Rahman Khan"
+              required
+            />
+          </div>
+        </div>
+
+        <div class="form-grid-2">
+          <div class="form-group">
+            <label for="stu-email" class="form-label">Institutional Email</label>
+            <input
+              type="email"
+              id="stu-email"
+              name="email"
+              class="form-input font-mono"
+              placeholder="23-54334-3@student.aiub.edu"
+              required
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="stu-phone" class="form-label">Student Mobile Number</label>
+            <input
+              type="tel"
+              id="stu-phone"
+              name="studentPhone"
+              class="form-input font-mono"
+              placeholder="017XX-XXXXXX"
+              required
+            />
+          </div>
+        </div>
+
+        <div class="form-grid-2">
+          <div class="form-group">
+            <label for="stu-faculty" class="form-label">Faculty / Department</label>
+            <select id="stu-faculty" name="faculty" class="form-select" required>
+              <option value="FST-CSE">FST — Computer Science (CSE)</option>
+              <option value="FE-EEE">FE — Electrical &amp; Electronic (EEE)</option>
+              <option value="FBA-BBA">FBA — Business Administration (BBA)</option>
+              <option value="FASS">FASS — Arts &amp; Social Sciences</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="stu-blood" class="form-label">Blood Group (For Emergency SOS)</label>
+            <select id="stu-blood" name="bloodGroup" class="form-select" required>
+              <option value="A+">A Positive (A+)</option>
+              <option value="A-">A Negative (A-)</option>
+              <option value="B+">B Positive (B+)</option>
+              <option value="B-">B Negative (B-)</option>
+              <option value="O+">O Positive (O+)</option>
+              <option value="O-">O Negative (O-)</option>
+              <option value="AB+">AB Positive (AB+)</option>
+              <option value="AB-">AB Negative (AB-)</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="section-divider-label">02. Route, Pickup Point &amp; Guardian Link</div>
+
+        <div class="form-grid-2">
+          <div class="form-group">
+            <label for="stu-pickup" class="form-label">Preferred Pickup Point &amp; Route</label>
+            <select id="stu-pickup" name="pickupPoint" class="form-select" required>
+              <option value="R-01">Uttara House Building (Route R-01)</option>
+              <option value="R-02">Mirpur-10 Roundabout (Route R-02)</option>
+              <option value="R-03">Dhanmondi 27 / Asad Gate (Route R-03)</option>
+              <option value="R-04">Banani Chairman Bari (Route R-04)</option>
+              <option value="R-05">Bashundhara Gate (Route R-05)</option>
+              <option value="R-06">Badda / Rampura TV Center (Route R-06)</option>
+              <option value="R-07">Motijheel / Khilgaon Flyover (Route R-07)</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="stu-shift" class="form-label">Default Schedule Shift</label>
+            <select id="stu-shift" name="shift" class="form-select" required>
+              <option value="07:15 AM">Morning Shift 01 (07:15 AM Departure)</option>
+              <option value="08:30 AM">Morning Shift 02 (08:30 AM Departure)</option>
+              <option value="10:30 AM">Midday Shift (10:30 AM Departure)</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-grid-2">
+          <div class="form-group">
+            <label for="stu-guardian-name" class="form-label">Parent / Guardian Full Name</label>
+            <input
+              type="text"
+              id="stu-guardian-name"
+              name="guardianName"
+              class="form-input"
+              placeholder="For linked Parent Portal"
+              required
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="stu-guardian-phone" class="form-label">Guardian Mobile Number</label>
+            <input
+              type="tel"
+              id="stu-guardian-phone"
+              name="guardianPhone"
+              class="form-input font-mono"
+              placeholder="01711-XXXXXX"
+              required
+            />
+          </div>
+        </div>
+
+        <div class="section-divider-label">03. Security Credentials</div>
+
+        <div class="form-grid-2">
+          <div class="form-group">
+            <label for="stu-password" class="form-label">Create Password</label>
+            <input
+              type="password"
+              id="stu-password"
+              name="password"
+              class="form-input"
+              placeholder="Minimum 6 characters"
+              required
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="stu-confirm" class="form-label">Confirm Password</label>
+            <input
+              type="password"
+              id="stu-confirm"
+              name="confirmPassword"
+              class="form-input"
+              placeholder="Re-enter password"
+              required
+            />
+          </div>
+        </div>
+
+        <div class="form-row-inline">
+          <label class="checkbox-label">
+            <input type="checkbox" required checked />
+            <span>I confirm my AIUB university information and agree to campus bus pass regulations.</span>
+          </label>
+        </div>
+
+        <button type="submit" class="btn-primary-submit">
+          Submit Student Registration (Requires Admin Approval)
+        </button>
+      </form>
+
+      <!-- =================================================================
+           2. PARENT / GUARDIAN REGISTRATION FORM
+           ================================================================= -->
+      <form id="form-parent" class="reg-form hidden" action="#" method="post" onsubmit="handleRegSubmit(event, 'Parent / Guardian')">
+        <div class="section-divider-label">01. Parent / Guardian Information</div>
+
+        <div class="form-grid-2">
+          <div class="form-group">
+            <label for="par-name" class="form-label">Parent / Guardian Full Name</label>
+            <input
+              type="text"
+              id="par-name"
+              name="guardianFullName"
+              class="form-input"
+              placeholder="Md. Rahman Khan"
+              required
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="par-relation" class="form-label">Relationship to Student</label>
+            <select id="par-relation" name="relationship" class="form-select" required>
+              <option value="Father">Father</option>
+              <option value="Mother">Mother</option>
+              <option value="Legal Guardian">Legal Guardian</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-grid-2">
+          <div class="form-group">
+            <label for="par-phone" class="form-label">Guardian Mobile Number (Login ID)</label>
+            <input
+              type="tel"
+              id="par-phone"
+              name="guardianMobile"
+              class="form-input font-mono"
+              placeholder="01711-543343"
+              required
+            />
+            <span class="field-hint">Used for login and arrival/departure SMS alerts</span>
+          </div>
+
+          <div class="form-group">
+            <label for="par-email" class="form-label">Guardian Email Address</label>
+            <input
+              type="email"
+              id="par-email"
+              name="guardianEmail"
+              class="form-input"
+              placeholder="guardian@example.com"
+              required
+            />
+          </div>
+        </div>
+
+        <div class="section-divider-label">02. Linked AIUB Student Details</div>
+
+        <div class="form-grid-2">
+          <div class="form-group">
+            <label for="par-student-id" class="form-label">Linked Student’s AIUB ID</label>
+            <input
+              type="text"
+              id="par-student-id"
+              name="linkedStudentId"
+              class="form-input font-mono"
+              placeholder="23-54334-3"
+              required
+            />
+            <span class="field-hint">Links your account to your child’s assigned bus &amp; route</span>
+          </div>
+
+          <div class="form-group">
+            <label for="par-student-name" class="form-label">Linked Student’s Full Name</label>
+            <input
+              type="text"
+              id="par-student-name"
+              name="linkedStudentName"
+              class="form-input"
+              placeholder="Md. Tahmidur Rahman Khan"
+              required
+            />
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="par-address" class="form-label">Residential / Pickup Area Address</label>
+          <input
+            type="text"
+            id="par-address"
+            name="residentialAddress"
+            class="form-input"
+            placeholder="Sector 7, Uttara, Dhaka-1230"
+            required
+          />
+        </div>
+
+        <div class="form-group">
+          <span class="form-label">Guardian Notification Preferences</span>
+          <div class="checkbox-stack">
+            <label class="checkbox-label">
+              <input type="checkbox" checked />
+              <span>Receive bus arrival, boarding, and campus departure alerts</span>
+            </label>
+            <label class="checkbox-label">
+              <input type="checkbox" checked />
+              <span>Receive important transport schedule announcements &amp; emergency alerts</span>
+            </label>
+          </div>
+        </div>
+
+        <div class="section-divider-label">03. Security Credentials</div>
+
+        <div class="form-grid-2">
+          <div class="form-group">
+            <label for="par-password" class="form-label">Create Password</label>
+            <input
+              type="password"
+              id="par-password"
+              name="password"
+              class="form-input"
+              placeholder="Minimum 6 characters"
+              required
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="par-confirm" class="form-label">Confirm Password</label>
+            <input
+              type="password"
+              id="par-confirm"
+              name="confirmPassword"
+              class="form-input"
+              placeholder="Re-enter password"
+              required
+            />
+          </div>
+        </div>
+
+        <button type="submit" class="btn-primary-submit">
+          Register Parent / Guardian Account
+        </button>
+      </form>
+
+      <!-- =================================================================
+           3. ADMINISTRATOR REGISTRATION FORM
+           ================================================================= -->
+      <form id="form-admin" class="reg-form hidden" action="#" method="post" onsubmit="handleRegSubmit(event, 'Administrator')">
+        <div class="section-divider-label">01. Administrator Official Credentials</div>
+
+        <div class="form-grid-2">
+          <div class="form-group">
+            <label for="adm-name" class="form-label">Administrator Full Name</label>
+            <input
+              type="text"
+              id="adm-name"
+              name="adminName"
+              class="form-input"
+              placeholder="Tanvir Ahmed"
+              required
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="adm-staff-id" class="form-label">AIUB Employee / Staff ID</label>
+            <input
+              type="text"
+              id="adm-staff-id"
+              name="staffId"
+              class="form-input font-mono"
+              placeholder="ADM-2026-03"
+              required
+            />
+          </div>
+        </div>
+
+        <div class="form-grid-2">
+          <div class="form-group">
+            <label for="adm-email" class="form-label">Official AIUB Staff Email</label>
+            <input
+              type="email"
+              id="adm-email"
+              name="staffEmail"
+              class="form-input font-mono"
+              placeholder="admin.transport@aiub.edu"
+              required
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="adm-phone" class="form-label">Official Mobile Number</label>
+            <input
+              type="tel"
+              id="adm-phone"
+              name="staffPhone"
+              class="form-input font-mono"
+              placeholder="01844-115000"
+              required
+            />
+          </div>
+        </div>
+
+        <div class="section-divider-label">02. Transport Role &amp; Dispatch Authorization</div>
+
+        <div class="form-grid-2">
+          <div class="form-group">
+            <label for="adm-designation" class="form-label">Administrative Responsibility</label>
+            <select id="adm-designation" name="designation" class="form-select" required>
+              <option value="Chief Transport Administrator">Chief Transport Administrator (Full Access)</option>
+              <option value="Student & Parent Account Officer">Student &amp; Parent Account Approval Officer</option>
+              <option value="Bus, Driver & Route Manager">Bus, Driver &amp; Route Schedule Manager</option>
+              <option value="Pass & Payment Verification Officer">Reservation &amp; Pass Payment Verifier</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="adm-hub" class="form-label">Assigned Operations Hub</label>
+            <select id="adm-hub" name="operationsHub" class="form-select" required>
+              <option value="Kuril Permanent Campus">Kuril Permanent Campus — Central Dispatch</option>
+              <option value="Banani Annex Hub">Banani Transport Annex</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-grid-2">
+          <div class="form-group">
+            <label for="adm-pin" class="form-label">4-Digit Transport Control PIN</label>
+            <input
+              type="password"
+              id="adm-pin"
+              name="securityPin"
+              maxlength="4"
+              class="form-input font-mono"
+              placeholder="e.g. 4303"
+              required
+            />
+            <span class="field-hint">Required alongside password during Admin login</span>
+          </div>
+
+          <div class="form-group">
+            <label for="adm-auth-code" class="form-label">Department Authorization Code</label>
+            <input
+              type="text"
+              id="adm-auth-code"
+              name="authCode"
+              class="form-input font-mono"
+              placeholder="AIUB-TRN-2026"
+              required
+            />
+          </div>
+        </div>
+
+        <div class="section-divider-label">03. Security Credentials</div>
+
+        <div class="form-grid-2">
+          <div class="form-group">
+            <label for="adm-password" class="form-label">Create Admin Password</label>
+            <input
+              type="password"
+              id="adm-password"
+              name="password"
+              class="form-input"
+              placeholder="Minimum 8 characters"
+              required
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="adm-confirm" class="form-label">Confirm Admin Password</label>
+            <input
+              type="password"
+              id="adm-confirm"
+              name="confirmPassword"
+              class="form-input"
+              placeholder="Re-enter password"
+              required
+            />
+          </div>
+        </div>
+
+        <button type="submit" class="btn-primary-submit">
+          Register Administrator Account
+        </button>
+      </form>
+
+      <!-- Bottom Sign-In Redirect -->
+      <div class="card-footer-row">
+        <span>Already have an approved account?</span>
+        <a href="login.html" class="signin-link">Sign In to Portal →</a>
+      </div>
+    </section>
+  </main>
+
+  <script>
+    function switchRegRole(role) {
+      document.getElementById('tab-student').classList.toggle('active', role === 'student');
+      document.getElementById('tab-parent').classList.toggle('active', role === 'parent');
+      document.getElementById('tab-admin').classList.toggle('active', role === 'admin');
+
+      document.getElementById('form-student').classList.toggle('hidden', role !== 'student');
+      document.getElementById('form-parent').classList.toggle('hidden', role !== 'parent');
+      document.getElementById('form-admin').classList.toggle('hidden', role !== 'admin');
+
+      var notice = document.getElementById('reg-role-notice');
+      var feedback = document.getElementById('reg-feedback');
+      feedback.classList.add('hidden');
+
+      if (role === 'student') {
+        notice.innerHTML = '<strong>Student Registration:</strong> Register with your AIUB university credentials. Your account will become active after Administrator approval so you can buy monthly bus passes, reserve seats, and track buses live.';
+      } else if (role === 'parent') {
+        notice.innerHTML = '<strong>Parent / Guardian Registration:</strong> Link your account to your child’s AIUB Student ID to monitor their assigned bus, driver information, pickup schedule, and live bus location.';
+      } else {
+        notice.innerHTML = '<strong>Administrator Registration:</strong> Authorized AIUB Office of Transport staff registration for managing student approvals, buses, drivers, routes, schedules, and reports.';
+      }
+    }
+
+    function handleRegSubmit(e, roleLabel) {
+      e.preventDefault();
+      var feedback = document.getElementById('reg-feedback');
+      feedback.classList.remove('hidden');
+      feedback.className = 'feedback-banner feedback-success';
+
+      if (roleLabel === 'Student') {
+        var stuId = document.getElementById('stu-id').value.trim();
+        feedback.textContent = 'Student registration submitted for ID ' + stuId + '. Your account is now awaiting Administrator approval.';
+      } else if (roleLabel === 'Parent / Guardian') {
+        var linkedId = document.getElementById('par-student-id').value.trim();
+        feedback.textContent = 'Parent / Guardian account registered and linked to Student ID ' + linkedId + '.';
+      } else {
+        var staffId = document.getElementById('adm-staff-id').value.trim();
+        feedback.textContent = 'Administrator account registered for Staff ID ' + staffId + '.';
+      }
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,285 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Manage Drivers - AIUB BMS Admin Panel</title>
+    <!-- Font Awesome 6 for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <!-- External Section Stylesheet -->
+    <link rel="stylesheet" href="drivers.css" />
+  </head>
+  <body>
+    <div class="admin-layout">
+      <!-- ==================== LEFT SIDEBAR ==================== -->
+      <aside class="sidebar">
+        <div class="sidebar-brand">
+          <div class="brand-logo-box">
+            <i class="fa-solid fa-bus"></i>
+          </div>
+          <div class="brand-text">
+            <h1 class="brand-title">AIUB BMS</h1>
+            <span class="brand-subtitle">ADMIN PANEL</span>
+          </div>
+        </div>
+
+        <nav class="sidebar-nav" aria-label="Admin Navigation">
+          <a href="index.html" class="nav-item">
+            <i class="fa-solid fa-house"></i>
+            <span>Home</span>
+          </a>
+        </nav>
+
+        <div class="sidebar-footer">
+          <div class="admin-profile">
+            <div class="admin-avatar">
+              <i class="fa-solid fa-user"></i>
+            </div>
+            <div class="admin-info">
+              <p class="admin-email">amiadmin@gmail.com</p>
+              <span class="admin-role">Administrator</span>
+            </div>
+          </div>
+          <button type="button" class="btn-logout">
+            <i class="fa-solid fa-right-from-bracket"></i>
+            <span>Log Out</span>
+          </button>
+        </div>
+      </aside>
+
+      <!-- ==================== MAIN CONTENT AREA ==================== -->
+      <main class="main-content">
+        <header class="page-header-row">
+          <div>
+            <h2 class="page-heading">MANAGE DRIVERS</h2>
+            <div class="heading-underline"></div>
+          </div>
+          <a href="#modal-add" class="btn-primary-add">
+            <i class="fa-solid fa-plus"></i>
+            <span>Add New Driver</span>
+          </a>
+        </header>
+
+        <!-- Manage Drivers Table Card -->
+        <section class="table-card" aria-label="Manage Drivers Table">
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th>FullName</th>
+                <th>PhoneNumber</th>
+                <th>LicenseNumber</th>
+                <th>Assigned Bus</th>
+                <th class="text-right">Actions</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="fw-bold">Md. Rafiqul Islam</td>
+                <td>+880 1712-458920</td>
+                <td>DL-DHK-2019-88412</td>
+                <td><span class="bus-link">Gazipur-01</span></td>
+                <td class="text-right">
+                  <div class="icon-actions">
+                    <a href="#modal-edit" class="btn-icon btn-icon-edit" title="Edit Driver"><i class="fa-regular fa-pen-to-square"></i></a>
+                    <a href="#modal-view" class="btn-icon btn-icon-view" title="View Driver"><i class="fa-regular fa-eye"></i></a>
+                    <a href="#modal-delete" class="btn-icon btn-icon-delete" title="Delete Driver"><i class="fa-solid fa-trash"></i></a>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td class="fw-bold">Abdul Karim Mia</td>
+                <td>+880 1819-339104</td>
+                <td>DL-DHK-2020-55301</td>
+                <td><span class="bus-link">Gazipur-02</span></td>
+                <td class="text-right">
+                  <div class="icon-actions">
+                    <a href="#modal-edit" class="btn-icon btn-icon-edit" title="Edit Driver"><i class="fa-regular fa-pen-to-square"></i></a>
+                    <a href="#modal-view" class="btn-icon btn-icon-view" title="View Driver"><i class="fa-regular fa-eye"></i></a>
+                    <a href="#modal-delete" class="btn-icon btn-icon-delete" title="Delete Driver"><i class="fa-solid fa-trash"></i></a>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td class="fw-bold">Md. Mizanur Rahman</td>
+                <td>+880 1911-772819</td>
+                <td>DL-DHK-2018-41209</td>
+                <td><span class="bus-link">Jatrabari-01</span></td>
+                <td class="text-right">
+                  <div class="icon-actions">
+                    <a href="#modal-edit" class="btn-icon btn-icon-edit" title="Edit Driver"><i class="fa-regular fa-pen-to-square"></i></a>
+                    <a href="#modal-view" class="btn-icon btn-icon-view" title="View Driver"><i class="fa-regular fa-eye"></i></a>
+                    <a href="#modal-delete" class="btn-icon btn-icon-delete" title="Delete Driver"><i class="fa-solid fa-trash"></i></a>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td class="fw-bold">Shahidul Alam</td>
+                <td>+880 1675-883410</td>
+                <td>DL-DHK-2021-90415</td>
+                <td><span class="bus-link">Mirpur-01</span></td>
+                <td class="text-right">
+                  <div class="icon-actions">
+                    <a href="#modal-edit" class="btn-icon btn-icon-edit" title="Edit Driver"><i class="fa-regular fa-pen-to-square"></i></a>
+                    <a href="#modal-view" class="btn-icon btn-icon-view" title="View Driver"><i class="fa-regular fa-eye"></i></a>
+                    <a href="#modal-delete" class="btn-icon btn-icon-delete" title="Delete Driver"><i class="fa-solid fa-trash"></i></a>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td class="fw-bold">Kamrul Hasan</td>
+                <td>+880 1755-609123</td>
+                <td>DL-DHK-2019-74108</td>
+                <td><span class="bus-link">Dhanmondi-01</span></td>
+                <td class="text-right">
+                  <div class="icon-actions">
+                    <a href="#modal-edit" class="btn-icon btn-icon-edit" title="Edit Driver"><i class="fa-regular fa-pen-to-square"></i></a>
+                    <a href="#modal-view" class="btn-icon btn-icon-view" title="View Driver"><i class="fa-regular fa-eye"></i></a>
+                    <a href="#modal-delete" class="btn-icon btn-icon-delete" title="Delete Driver"><i class="fa-solid fa-trash"></i></a>
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+
+        <!-- ==================== 1. ADD MODAL ==================== -->
+        <div id="modal-add" class="modal-overlay" role="dialog" aria-labelledby="modal-add-title">
+          <div class="modal-box">
+            <div class="modal-header">
+              <h3 id="modal-add-title"><i class="fa-solid fa-user-tie"></i> Register New Driver</h3>
+              <a href="#" class="modal-close" aria-label="Close">&times;</a>
+            </div>
+            <form action="#" class="modal-form">
+              <div class="form-group">
+                <label for="add-driver-name">Driver Full Name</label>
+                <input type="text" id="add-driver-name" placeholder="e.g., Md. Jahangir Alam" required />
+              </div>
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="add-driver-phone">Phone Number</label>
+                  <input type="tel" id="add-driver-phone" placeholder="e.g., +880 1711-000000" required />
+                </div>
+                <div class="form-group">
+                  <label for="add-driver-license">BRTA License Number</label>
+                  <input type="text" id="add-driver-license" placeholder="e.g., DL-DHK-2022-11904" required />
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="add-driver-bus">Assign to Bus</label>
+                <select id="add-driver-bus">
+                  <option>Gazipur-01</option>
+                  <option>Gazipur-02</option>
+                  <option>Jatrabari-01</option>
+                  <option>Jatrabari-02</option>
+                  <option>Mirpur-01</option>
+                  <option>Mirpur-02</option>
+                  <option>Dhanmondi-01</option>
+                  <option>Dhanmondi-02</option>
+                </select>
+              </div>
+              <div class="modal-footer">
+                <a href="#" class="btn-modal-cancel">Cancel</a>
+                <a href="#" class="btn-modal-submit">Save Driver</a>
+              </div>
+            </form>
+          </div>
+        </div>
+
+        <!-- ==================== 2. EDIT MODAL ==================== -->
+        <div id="modal-edit" class="modal-overlay" role="dialog" aria-labelledby="modal-edit-title">
+          <div class="modal-box">
+            <div class="modal-header">
+              <h3 id="modal-edit-title"><i class="fa-regular fa-pen-to-square"></i> Edit Driver Profile</h3>
+              <a href="#" class="modal-close" aria-label="Close">&times;</a>
+            </div>
+            <form action="#" class="modal-form">
+              <div class="form-group">
+                <label for="edit-driver-name">Driver Full Name</label>
+                <input type="text" id="edit-driver-name" value="Md. Rafiqul Islam" required />
+              </div>
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="edit-driver-phone">Phone Number</label>
+                  <input type="tel" id="edit-driver-phone" value="+880 1712-458920" required />
+                </div>
+                <div class="form-group">
+                  <label for="edit-driver-license">BRTA License Number</label>
+                  <input type="text" id="edit-driver-license" value="DL-DHK-2019-88412" required />
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="edit-driver-bus">Assigned Bus</label>
+                <select id="edit-driver-bus">
+                  <option selected>Gazipur-01</option>
+                  <option>Gazipur-02</option>
+                  <option>Jatrabari-01</option>
+                  <option>Mirpur-01</option>
+                  <option>Dhanmondi-01</option>
+                </select>
+              </div>
+              <div class="modal-footer">
+                <a href="#" class="btn-modal-cancel">Cancel</a>
+                <a href="#" class="btn-modal-submit">Update Driver</a>
+              </div>
+            </form>
+          </div>
+        </div>
+
+        <!-- ==================== 3. VIEW MODAL ==================== -->
+        <div id="modal-view" class="modal-overlay" role="dialog" aria-labelledby="modal-view-title">
+          <div class="modal-box">
+            <div class="modal-header">
+              <h3 id="modal-view-title"><i class="fa-regular fa-eye"></i> Driver Profile Details</h3>
+              <a href="#" class="modal-close" aria-label="Close">&times;</a>
+            </div>
+            <div class="detail-list">
+              <div class="detail-item">
+                <span class="detail-label">Full Name</span>
+                <span class="detail-value">Md. Rafiqul Islam</span>
+              </div>
+              <div class="detail-item">
+                <span class="detail-label">Phone Number</span>
+                <span class="detail-value">+880 1712-458920</span>
+              </div>
+              <div class="detail-item">
+                <span class="detail-label">License Number</span>
+                <span class="detail-value">DL-DHK-2019-88412</span>
+              </div>
+              <div class="detail-item">
+                <span class="detail-label">Assigned Bus</span>
+                <span class="detail-value"><span class="bus-link">Gazipur-01</span></span>
+              </div>
+              <div class="detail-item">
+                <span class="detail-label">Assigned Route</span>
+                <span class="detail-value">Shibbari → Board Bazar → Tongi → Kuril → AIUB</span>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <a href="#" class="btn-modal-cancel">Close</a>
+              <a href="#modal-edit" class="btn-modal-submit">Edit Driver</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- ==================== 4. DELETE MODAL ==================== -->
+        <div id="modal-delete" class="modal-overlay" role="dialog" aria-labelledby="modal-delete-title">
+          <div class="modal-box modal-box-sm">
+            <div class="modal-header modal-header-danger">
+              <h3 id="modal-delete-title"><i class="fa-solid fa-trash"></i> Remove Driver</h3>
+              <a href="#" class="modal-close" aria-label="Close">&times;</a>
+            </div>
+            <div class="modal-body-text">
+              <p>Are you sure you want to remove driver <strong>Md. Rafiqul Islam</strong> from the system?</p>
+              <p class="text-danger-note">Bus Gazipur-01 will require a new driver assignment.</p>
+            </div>
+            <div class="modal-footer">
+              <a href="#" class="btn-modal-cancel">Cancel</a>
+              <a href="#" class="btn-modal-danger">Confirm Delete</a>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+  </body>
+</html>

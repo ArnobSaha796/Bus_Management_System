@@ -1,0 +1,354 @@
+/* ==========================================================================
+   AIUB BUS MANAGEMENT SYSTEM — REGISTRATION STYLESHEET (register.css)
+   Web Technologies (Fall 2026-2027) · Section M, Group 03
+   ========================================================================== */
+
+:root {
+  --bg-canvas: #f8fafc;
+  --bg-surface: #ffffff;
+  --bg-subtle: #f1f5f9;
+  --text-primary: #0f172a;
+  --text-secondary: #334155;
+  --text-muted: #64748b;
+  --border-hairline: #e2e8f0;
+  --border-input: #cbd5e1;
+  --border-focus: #004ea2;
+  --aiub-blue: #004ea2;
+  --aiub-blue-hover: #003d82;
+  --aiub-blue-soft: #eff6ff;
+  --status-success: #15803d;
+  --status-success-bg: #f0fdf4;
+  --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+  --radius-outer: 16px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--bg-canvas);
+  color: var(--text-primary);
+  line-height: 1.5;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  -webkit-font-smoothing: antialiased;
+}
+
+.font-mono {
+  font-family: var(--font-mono);
+  font-variant-numeric: tabular-nums;
+}
+
+.hidden {
+  display: none !important;
+}
+
+/* --------------------------------------------------------------------------
+   1. Top Bar Navigation
+   -------------------------------------------------------------------------- */
+.top-navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  padding: 1rem 2.5rem;
+  background-color: var(--bg-surface);
+  border-bottom: 1px solid var(--border-hairline);
+}
+
+.brand-wordmark {
+  font-size: 1.0625rem;
+  font-weight: 700;
+  color: var(--aiub-blue);
+  text-decoration: none;
+  letter-spacing: -0.02em;
+  white-space: nowrap;
+}
+
+.top-nav-action {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.sos-badge {
+  font-size: 0.78rem;
+  color: var(--text-secondary);
+  white-space: nowrap;
+}
+
+.btn-outline-sm {
+  display: inline-block;
+  padding: 0.45rem 0.95rem;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  color: var(--aiub-blue);
+  background-color: var(--bg-surface);
+  border: 1px solid var(--aiub-blue);
+  border-radius: 8px;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: background-color 150ms ease;
+}
+
+.btn-outline-sm:hover {
+  background-color: var(--aiub-blue-soft);
+}
+
+/* --------------------------------------------------------------------------
+   2. Centered Registration Card Workspace
+   -------------------------------------------------------------------------- */
+.register-workspace {
+  flex: 1;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 2.5rem 1.25rem;
+}
+
+.register-card {
+  width: 100%;
+  max-width: 680px;
+  background-color: var(--bg-surface);
+  border: 1px solid var(--border-hairline);
+  border-radius: var(--radius-outer);
+  padding: 2.25rem;
+}
+
+.panel-header {
+  margin-bottom: 1.25rem;
+}
+
+.institution-tag {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--aiub-blue);
+  margin-bottom: 0.25rem;
+}
+
+.panel-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  letter-spacing: -0.02em;
+  margin-bottom: 0.25rem;
+}
+
+.panel-subtitle {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+/* --------------------------------------------------------------------------
+   3. Role Selector Tabs (Student / Parent / Administrator)
+   -------------------------------------------------------------------------- */
+.role-selector {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.5rem;
+  margin-bottom: 0.9rem;
+}
+
+.role-btn {
+  padding: 0.65rem 0.75rem;
+  font-family: var(--font-sans);
+  font-size: 0.8125rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  background-color: var(--bg-surface);
+  border: 1px solid var(--border-hairline);
+  border-radius: 8px;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: all 150ms ease;
+}
+
+.role-btn:hover {
+  border-color: var(--border-input);
+  background-color: var(--bg-canvas);
+}
+
+.role-btn.active {
+  background-color: var(--aiub-blue-soft);
+  border-color: var(--aiub-blue);
+  color: var(--aiub-blue);
+}
+
+.role-notice {
+  font-size: 0.78rem;
+  color: var(--text-secondary);
+  background-color: var(--bg-canvas);
+  border: 1px solid var(--border-hairline);
+  border-radius: 8px;
+  padding: 0.7rem 0.9rem;
+  margin-bottom: 1.25rem;
+  line-height: 1.5;
+}
+
+/* --------------------------------------------------------------------------
+   4. Registration Form Sections & Controls
+   -------------------------------------------------------------------------- */
+.reg-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.section-divider-label {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--aiub-blue);
+  padding-bottom: 0.35rem;
+  border-bottom: 1px solid var(--border-hairline);
+  margin-top: 0.25rem;
+}
+
+.form-grid-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.9rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.form-label {
+  font-size: 0.8125rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.form-input,
+.form-select {
+  width: 100%;
+  padding: 0.625rem 0.85rem;
+  font-family: var(--font-sans);
+  font-size: 0.875rem;
+  color: var(--text-primary);
+  background-color: var(--bg-surface);
+  border: 1px solid var(--border-input);
+  border-radius: 8px;
+  outline: none;
+  transition: border-color 150ms ease, box-shadow 150ms ease;
+}
+
+.form-input:focus,
+.form-select:focus {
+  border-color: var(--border-focus);
+  box-shadow: 0 0 0 3px rgba(0, 78, 162, 0.12);
+}
+
+.field-hint {
+  font-size: 0.72rem;
+  color: var(--text-muted);
+}
+
+.checkbox-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+  padding: 0.65rem 0.85rem;
+  background-color: var(--bg-canvas);
+  border: 1px solid var(--border-hairline);
+  border-radius: 8px;
+}
+
+.form-row-inline {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0.15rem 0;
+}
+
+.checkbox-label {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.8125rem;
+  color: var(--text-secondary);
+  cursor: pointer;
+}
+
+.btn-primary-submit {
+  width: 100%;
+  padding: 0.75rem 1.25rem;
+  font-family: var(--font-sans);
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #ffffff;
+  background-color: var(--aiub-blue);
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 0.25rem;
+  transition: background-color 150ms ease;
+}
+
+.btn-primary-submit:hover {
+  background-color: var(--aiub-blue-hover);
+}
+
+/* Feedback Banner */
+.feedback-banner {
+  margin-bottom: 1rem;
+  padding: 0.75rem 0.95rem;
+  border-radius: 8px;
+  font-size: 0.8125rem;
+  font-weight: 500;
+}
+
+.feedback-success {
+  background-color: var(--status-success-bg);
+  color: var(--status-success);
+  border: 1px solid #bbf7d0;
+}
+
+/* Card Footer Redirect */
+.card-footer-row {
+  margin-top: 1.5rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--border-hairline);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 0.8125rem;
+  color: var(--text-muted);
+}
+
+.signin-link {
+  font-weight: 600;
+  color: var(--aiub-blue);
+  text-decoration: none;
+}
+
+.signin-link:hover {
+  text-decoration: underline;
+}
+
+/* --------------------------------------------------------------------------
+   5. Responsive Breakpoints
+   -------------------------------------------------------------------------- */
+@media (max-width: 640px) {
+  .top-navbar {
+    padding: 0.85rem 1.25rem;
+  }
+  .sos-badge {
+    display: none;
+  }
+  .register-card {
+    padding: 1.5rem;
+  }
+  .form-grid-2,
+  .role-selector {
+    grid-template-columns: 1fr;
+  }
+}
