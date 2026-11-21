@@ -8,6 +8,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="register.css" />
+  <script defer src="register.js"></script>
 </head>
 <body>
 
@@ -521,47 +522,5 @@
       </div>
     </section>
   </main>
-
-  <script>
-    function switchRegRole(role) {
-      document.getElementById('tab-student').classList.toggle('active', role === 'student');
-      document.getElementById('tab-parent').classList.toggle('active', role === 'parent');
-      document.getElementById('tab-admin').classList.toggle('active', role === 'admin');
-
-      document.getElementById('form-student').classList.toggle('hidden', role !== 'student');
-      document.getElementById('form-parent').classList.toggle('hidden', role !== 'parent');
-      document.getElementById('form-admin').classList.toggle('hidden', role !== 'admin');
-
-      var notice = document.getElementById('reg-role-notice');
-      var feedback = document.getElementById('reg-feedback');
-      feedback.classList.add('hidden');
-
-      if (role === 'student') {
-        notice.innerHTML = '<strong>Student Registration:</strong> Register with your AIUB university credentials. Your account will become active after Administrator approval so you can buy monthly bus passes, reserve seats, and track buses live.';
-      } else if (role === 'parent') {
-        notice.innerHTML = '<strong>Parent / Guardian Registration:</strong> Link your account to your child’s AIUB Student ID to monitor their assigned bus, driver information, pickup schedule, and live bus location.';
-      } else {
-        notice.innerHTML = '<strong>Administrator Registration:</strong> Authorized AIUB Office of Transport staff registration for managing student approvals, buses, drivers, routes, schedules, and reports.';
-      }
-    }
-
-    function handleRegSubmit(e, roleLabel) {
-      e.preventDefault();
-      var feedback = document.getElementById('reg-feedback');
-      feedback.classList.remove('hidden');
-      feedback.className = 'feedback-banner feedback-success';
-
-      if (roleLabel === 'Student') {
-        var stuId = document.getElementById('stu-id').value.trim();
-        feedback.textContent = 'Student registration submitted for ID ' + stuId + '. Your account is now awaiting Administrator approval.';
-      } else if (roleLabel === 'Parent / Guardian') {
-        var linkedId = document.getElementById('par-student-id').value.trim();
-        feedback.textContent = 'Parent / Guardian account registered and linked to Student ID ' + linkedId + '.';
-      } else {
-        var staffId = document.getElementById('adm-staff-id').value.trim();
-        feedback.textContent = 'Administrator account registered for Staff ID ' + staffId + '.';
-      }
-    }
-  </script>
 </body>
 </html>

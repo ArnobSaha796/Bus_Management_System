@@ -8,6 +8,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="login.css" />
+  <script defer src="login.js"></script>
 </head>
 <body>
 
@@ -138,85 +139,5 @@
       </form>
     </section>
   </main>
-
-  <script>
-    var currentRole = 'student';
-
-    function selectRole(role) {
-      currentRole = role;
-      document.getElementById('role-student').classList.toggle('active', role === 'student');
-      document.getElementById('role-parent').classList.toggle('active', role === 'parent');
-      document.getElementById('role-admin').classList.toggle('active', role === 'admin');
-
-      var label = document.getElementById('label-identifier');
-      var input = document.getElementById('login-identifier');
-      var hint = document.getElementById('hint-identifier');
-      var notice = document.getElementById('role-notice-text');
-      var submitBtn = document.getElementById('btn-submit-login');
-      var linkedGroup = document.getElementById('group-linked-student');
-      var adminPinGroup = document.getElementById('group-admin-pin');
-
-      linkedGroup.classList.toggle('hidden', role !== 'parent');
-      adminPinGroup.classList.toggle('hidden', role !== 'admin');
-      document.getElementById('form-feedback').classList.add('hidden');
-
-      if (role === 'student') {
-        label.textContent = 'AIUB Student ID or Institutional Email';
-        input.placeholder = '23-54334-3 or 23-54334-3@student.aiub.edu';
-        hint.textContent = 'Format: XX-XXXXX-X (Account must be approved by Administrator)';
-        notice.innerHTML = '<strong>Student Access:</strong> Primary campus commuter portal. Purchase monthly bus passes, reserve seats, select pickup points, track buses live, and access SOS alerts.';
-        submitBtn.textContent = 'Sign In as Student';
-      } else if (role === 'parent') {
-        label.textContent = 'Registered Guardian Phone or Email';
-        input.placeholder = '01711-543343 or guardian@example.com';
-        hint.textContent = 'Linked to an approved AIUB Student ID for journey monitoring';
-        notice.innerHTML = '<strong>Parent / Guardian Access:</strong> View your linked student’s assigned bus, driver profile, pickup schedule, and live travel status.';
-        submitBtn.textContent = 'Sign In as Parent / Guardian';
-      } else {
-        label.textContent = 'Administrator Username or Staff Email';
-        input.placeholder = 'admin.transport@aiub.edu';
-        hint.textContent = 'Restricted to AIUB Office of Transport & Operations';
-        notice.innerHTML = '<strong>Administrator Access:</strong> Approve student registrations, manage buses, drivers, routes, schedules, verify pass payments, and handle complaints.';
-        submitBtn.textContent = 'Sign In as Administrator';
-      }
-    }
-
-    function togglePasswordVisibility() {
-      var pwInput = document.getElementById('login-password');
-      var btn = document.getElementById('btn-toggle-pw');
-      if (pwInput.type === 'password') {
-        pwInput.type = 'text';
-        btn.textContent = 'Hide';
-      } else {
-        pwInput.type = 'password';
-        btn.textContent = 'Show';
-      }
-    }
-
-    function toggleResetNote() {
-      var feedback = document.getElementById('form-feedback');
-      var idVal = document.getElementById('login-identifier').value.trim() || 'your registered account';
-      feedback.classList.remove('hidden');
-      feedback.className = 'feedback-banner feedback-success';
-      feedback.textContent = 'Password recovery instructions sent to the institutional contact on file for ' + idVal + '.';
-    }
-
-    function handleLoginSubmit(e) {
-      e.preventDefault();
-      var idVal = document.getElementById('login-identifier').value.trim();
-      var pwVal = document.getElementById('login-password').value.trim();
-      var feedback = document.getElementById('form-feedback');
-      feedback.classList.remove('hidden');
-
-      if (!idVal || !pwVal) {
-        feedback.className = 'feedback-banner feedback-error';
-        feedback.textContent = 'Please enter both your account identifier and password.';
-        return;
-      }
-
-      feedback.className = 'feedback-banner feedback-success';
-      feedback.textContent = 'Authenticated as ' + currentRole.toUpperCase() + ' (' + idVal + '). Redirecting to dashboard...';
-    }
-  </script>
 </body>
 </html>
